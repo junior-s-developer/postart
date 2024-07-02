@@ -66,16 +66,19 @@ document.addEventListener('input', function(event) {
 function showDivInstalation() {
 
     var instalation = document.getElementById('installation');
-    var fieldset_content = document.querySelector('.fieldset-content-vehicle');
+    var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
+    var content_vehicle_atributs_select = document.querySelector('.content-vehicle-atributs-select');
     var others = document.querySelector('.others');
     var input_installation = document.getElementById('input-installation');
 
     if(instalation.value === '1') {
-        fieldset_content.style.display = 'flex';
+        fieldset_content_vehicle.style.display = 'flex';
+        content_vehicle_atributs_select.style.display = 'flex';
         others.style.display = 'none';
     } else if(instalation.value === '2') {
         others.style.display = 'block';
-        fieldset_content.style.display = 'none';
+        fieldset_content_vehicle.style.display = 'none';
+        content_vehicle_atributs_select.style.display = 'none';
         input_installation.focus();
     }
 }
@@ -108,6 +111,7 @@ function validarInput() {
     var input_larg = document.getElementById('input-larg');
     var material = document.getElementById('material');
     var finishing = document.getElementById('finishing');
+    var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
     var brand = document.getElementById('brand');
     var model = document.getElementById('model');
     var year = document.getElementById('year');
@@ -138,34 +142,37 @@ function validarInput() {
         alert('Escolha o tipo de acabamento.');
         finishing.focus();
         return false;
-    } else if (brand && !brand.value.trim()) {
-        alert('Informe a marca do veículo.');
-        brand.focus();
-        return false;
-    } else if (model && !model.value.trim()) {
-        alert('Informe o modelo do veículo.');
-        model.focus();
-        return false;
-    } else if (year && (!year.value.trim() || year.value.trim().length < 4)) {
-        alert('Informe o ano do veículo corretamente com 4 dígitos.');
-        year.focus();
-        return false;
-    } else if (color && !color.value.trim()) {
-        alert('Informe a cor do veículo.');
-        color.focus();
-        return false;
-    } else if (area && area.value === '') {
-        alert('Escolha a área do veículo a ser adesivada.');
-        area.focus();
-        return false;
-    } else if (goal && goal.value === '') {
-        alert('Selecione o objetivo da adesivação do veículo.');
-        goal.focus();
-        return false;
-    } else if (input_installation && !input_installation.value.trim()) {
-        alert('Informe o local da adesivação');
-        input_installation.focus();
-        return false;
+    } else if(fieldset_content_vehicle.style.display === 'flex' || fieldset_content_vehicle.style.display === 'block') {
+        if (brand && !brand.value.trim()) {
+            alert('Informe a marca do veículo.');
+            brand.focus();
+            return false;
+        } else if (model && !model.value.trim()) {
+            alert('Informe o modelo do veículo.');
+            model.focus();
+            return false;
+        } else if (year && (!year.value.trim() || year.value.trim().length < 4)) {
+            alert('Informe o ano do veículo corretamente com 4 dígitos.');
+            year.focus();
+            return false;
+        } else if (color && !color.value.trim()) {
+            alert('Informe a cor do veículo.');
+            color.focus();
+            return false;
+        } else if (area && area.value === '') {
+            alert('Escolha a área do veículo a ser adesivada.');
+            area.focus();
+            return false;
+        } else if (goal && goal.value === '') {
+            alert('Selecione o objetivo da adesivação do veículo.');
+            goal.focus();
+            return false;
+        } else if (input_installation && !input_installation.value.trim()) {
+            alert('Informe o local da adesivação');
+            input_installation.focus();
+            return false;
+        }
+
     } else if (quantity && (quantity.value === '0' || quantity.value === '')) {
         alert('A quantidade mínima de produto é 1.');
         quantity.focus();

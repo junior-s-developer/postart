@@ -65,7 +65,11 @@
         margin-bottom: 10px;
     }
 
-    .fieldset-content-vehicle .lbl-attributes {
+    .fieldset-content-vehicle #lbl-attributes {
+        display: none;
+    }
+
+    .content-vehicle-atributs-select #lbl-attributes {
         display: none;
     }
 
@@ -132,14 +136,6 @@
     fieldset .input-content {
         width: 100%;
         margin-bottom: 10px;
-    }
-
-    .fieldset-content-vehicle .lbl-attributes {
-        display: none;
-    }
-
-    .others .lbl-attributes{
-        display: none;
     }
 
     .custom-button:hover {
