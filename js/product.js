@@ -65,21 +65,21 @@ document.addEventListener('input', function(event) {
 
 function showDivInstalation() {
 
-    var instalation = document.getElementById('installation');
+    var Purpose_use = document.getElementById('purpose-use');
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
     var content_vehicle_atributs_select = document.querySelector('.content-vehicle-atributs-select');
     var others = document.querySelector('.others');
-    var input_installation = document.getElementById('input-installation');
+    var input_others = document.getElementById('input-others');
 
-    if(instalation.value === '1') {
+    if(Purpose_use.value === '1') {
         fieldset_content_vehicle.style.display = 'flex';
-        content_vehicle_atributs_select.style.display = 'block';
         others.style.display = 'none';
-    } else if(instalation.value === '2') {
+        content_vehicle_atributs_select.style.display = 'block';
+    } else if(Purpose_use.value === '2') {
         others.style.display = 'block';
         fieldset_content_vehicle.style.display = 'none';
+        input_others.focus();
         content_vehicle_atributs_select.style.display = 'none';
-        input_installation.focus();
     }
 }
 
@@ -118,6 +118,8 @@ function validarInput() {
     var color = document.getElementById('color');
     var area = document.getElementById('area');
     var goal = document.getElementById('goal');
+    var purpose_use = document.getElementById('purpose-use');
+    var application = document.getElementById('application');
     var quantity = document.getElementById('quantity');
     var name = document.getElementById('name');
     var email = document.getElementById('email');
@@ -142,7 +144,12 @@ function validarInput() {
         alert('Escolha o tipo de acabamento.');
         finishing.focus();
         return false;
+    } else if (purpose_use && purpose_use.value === '') {
+        alert('Escolha a finalidade de uso.');
+        purpose_use.focus();
+        return false;
     } else if(fieldset_content_vehicle.style.display === 'flex' || fieldset_content_vehicle.style.display === 'block') {
+        
         if (brand && !brand.value.trim()) {
             alert('Informe a marca do veículo.');
             brand.focus();
@@ -173,6 +180,10 @@ function validarInput() {
             return false;
         }
 
+    } else if (application && application.value === '') {
+        alert('Escolha quem realizará a aplicação do adesivo.');
+        application.focus();
+        return false;
     } else if (quantity && (quantity.value === '0' || quantity.value === '')) {
         alert('A quantidade mínima de produto é 1.');
         quantity.focus();
