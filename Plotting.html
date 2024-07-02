@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Plotagem Automotivo</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Plotagem Automotivo</h1>
+            <div class="description-product">Por onde o veículo da empresa vai, a mensagem da empresa vai junto! Seja para causar a presença da marca ou para firmar uma mensagem é válido personalizar a frota de veículos da empresa.
+            </div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/vehicle.jpeg" alt="Vinil Personalizado">
+            </div>
+
+            <form class="form-product" name="form">
+
+                <div class="product">
+
+                    <fieldset>
+                            
+                        <legend>Informações básicas do veículo</legend>
+
+                        <div class="fieldset-text">
+                            <p>Para calcular as medidas necessárias para adesivar um veículo, é importante ter algumas informações básicas sobre o veículo. Com essas informações básicas, é possível calcular as dimensões exatas e a quantidade de material necessário para adesivar o veículo de forma eficiente e adequada ao seu propósito.</p>
+                        </div>
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Marca</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="brand"/>                        
+                            </div>
+    
+                        </div>
+    
+                        <div class="input-content">
+    
+                            <label for="input" class="lbl-attributes">Modelo</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="model"/>                        
+                            </div>
+    
+                        </div>
+    
+                        <div class="input-content">
+    
+                            <label for="input" class="lbl-attributes">Ano</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="year" maxlength="4"/>                        
+                            </div>
+    
+                        </div>
+    
+                        <div class="input-content">
+    
+                            <label for="input" class="lbl-attributes">Cor</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="color"/>                        
+                            </div>
+    
+                        </div>
+
+                    </fieldset>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Área</label>
+
+                        <select id="area" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Capô</option>
+                            <option value="2">Portas</option>
+                            <option value="3">Teto</option>
+                            <option value="4">Para-choques</option>
+                            <option value="5">Porta-malas</option>
+                            <option value="6">Vidros</option>
+                            <option value="7">Laterais</option>
+                            <option value="8">Espelhos Retrovisores</option>
+                            <option value="9">Interior</option>
+                            <option value="10">Todos exceto Interior</option>
+                            <option value="11">Todos</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Objetivo</label>
+
+                        <select id="goal" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Publicidade e Marketing</option>
+                            <option value="2">Personalização Estética</option>
+                            <option value="3">Identificação de Frota</option>
+                            <option value="4">Patrocínio e Parcerias</option>
+                            <option value="5">Promoção de Eventos</option>
+                            <option value="6">Campanhas Temporárias</option>
+                            <option value="7">Proteção da Pintura</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+
+                        <div class="quantity-container">
+                            <button type="button" onclick="adjust_quantity(-1)">-</button>
+                            <input type="text" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD. Caso não tenha o seu design não se preocupe, a PostArt cria tudo pra você!</p>
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input type="text" id="name" name="name" style="text-transform: capitalize;">
+            </div>
+
+            <div class="email-phone-content">
+
+                <div class="form-group" id="group-email">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group" id="group-phone">
+                    <label for="phone">Telefone *</label>
+                    <input type="text" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Veículo</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>Para calcular as medidas necessárias para adesivar um carro, é importante ter algumas informações básicas sobre o veículo.<br>Aqui estão as informações comuns que podem ser necessárias:</p>
+                        
+                        <ul>                   
+                            <li><strong>Marca e Modelo do Veículo: </strong>Identificação específica do carro para determinar o tamanho e as proporções corretas.</li>
+                            <li><strong>Ano do Veículo: </strong>Alguns modelos podem ter pequenas variações nas dimensões dependendo do ano de fabricação.</li>
+                            <li><strong>Área a ser Adesivada: </strong>Especifique quais partes do veículo serão adesivadas, como capô, portas, teto, etc.</li>
+                            <li><strong>Objetivo da Adesivação: </strong>Se é para publicidade, personalização estética, promoção de marca, etc. Isso pode influenciar o design e a quantidade de adesivo necessário.</li>
+                        </ul>  
+
+                        <p>Com essas informações básicas, é possível calcular as dimensões exatas e a quantidade de material necessário para adesivar o veículo de forma eficiente e adequada ao seu propósito.</p>                        
+      
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Área a ser adesivada</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>Existem várias partes do veículo que podem ser adesivadas, dependendo do objetivo e do estilo desejado. Aqui estão algumas das partes mais comuns que podem ser adesivadas:</p>
+                        
+                        <ul>           
+                            <li><strong>Capô: </strong>Uma área popular para adesivos, seja para decoração ou para destacar o estilo do carro.</li>
+                            <li><strong>Portas: </strong>As laterais das portas podem ser adesivadas para fins estéticos ou promocionais.</li>
+                            <li><strong>Teto: </strong>O teto do carro pode ser adesivado para adicionar um elemento visual ou promocional.</li>
+                            <li><strong>Para-choques: </strong>Áreas frontais e traseiras do para-choque podem ser adesivadas para destacar marcas ou informações.</li>
+                            <li><strong>Porta-malas: </strong>A parte traseira do carro, incluindo o porta-malas, pode ser adesivada para personalização visual.</li>
+                            <li><strong>Vidros: </strong>Adesivos podem ser aplicados nos vidros laterais ou no para-brisa, embora haja regulamentações sobre a visibilidade que devem ser respeitadas.</li>
+                            <li><strong>Laterais: </strong>Além das portas, outras áreas das laterais do carro podem ser adesivadas para um visual completo.</li>
+                            <li><strong>Espelhos Retrovisores: </strong>Os espelhos retrovisores podem receber adesivos para complementar o design geral do carro.</li>
+                            <li><strong>Interior: </strong>Algumas partes do interior do carro, como painéis, console central ou até mesmo os bancos, podem ser adesivadas para personalização.</li>  
+                        </ul>  
+
+                        <p>Essas são algumas das áreas mais comuns onde adesivos são aplicados. A escolha das partes vai depender do design desejado, do propósito da adesivação e das regulamentações locais, especialmente quando se trata de áreas que afetam a visibilidade e a segurança durante a condução.</p>
+
+                    </div>  
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Objetivo da adesivação</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+                     
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+                        
+                        <p>Existem vários tipos de objetivos para a adesivação de veículos, cada um com sua finalidade específica e estratégia de design. Aqui estão alguns dos objetivos mais comuns para adesivação de veículos:</p>                        
+                        
+                        <ul>
+                            <li><strong>Publicidade e Marketing: </strong>Utilizado por empresas para promover sua marca, produtos ou serviços. Os adesivos podem incluir logotipos, slogans, informações de contato e elementos visuais que destacam a marca.</li>
+                            <li><strong>Personalização Estética: </strong>Muitos proprietários de carros adesivam seus veículos para personalizá-los esteticamente, criando um visual único que reflete seu estilo pessoal. Isso pode incluir designs elaborados, gráficos coloridos ou padrões exclusivos.</li>
+                            <li><strong>Identificação de Frota: </strong>Empresas que possuem uma frota de veículos frequentemente adesivam seus carros com números de identificação, códigos QR, informações de serviço ou outras identificações para facilitar o gerenciamento da frota.</li>
+                            <li><strong>Patrocínio e Parcerias: </strong>Carros podem ser adesivados com logotipos de patrocinadores ou parceiros, especialmente em eventos esportivos, corridas ou atividades promocionais.</li>
+                            <li><strong>Promoção de Eventos: </strong>Veículos adesivados podem ser usados para promover eventos específicos, como feiras, conferências, festivais ou lançamentos de produtos.</li>
+                            <li><strong>Campanhas Temporárias: </strong>Adesivação temporária para campanhas promocionais sazonais ou eventos especiais.</li>
+                            <li><strong>Proteção da Pintura: </strong>Adesivos transparentes ou películas protetoras podem ser aplicados para proteger a pintura original do carro contra arranhões, pedras e desgaste do tempo.</li> 
+                        </ul>   
+
+                        <p>Cada objetivo de adesivação requer considerações específicas no design, na aplicação dos adesivos e nas regulamentações locais que possam afetar a visibilidade e a segurança durante a condução.</p>
+
+                    </div> 
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button style="margin-bottom: 0px;" class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>O preço do serviço varia em função da quantidade encomendada.</p>     
+
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

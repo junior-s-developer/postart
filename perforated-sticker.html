@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Adesivo Perfurado</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Adesivo Perfurado</h1>
+            <div class="description-product">Transforme vidros, vitrines, janelas, carros e muito mais com privacidade e visibilidade. Transforme qualquer superfície com elegância!
+            </div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/perforated-sticker.jpeg" alt="Vinil Personalizado">
+            </div>
+
+            <form class="form-product" name="form">
+
+                <div class="product">
+
+                    <div class="input-content">
+
+                        <label for="input" class="lbl-attributes">Tamanho</label>
+                        
+                        <div class="input-measures">
+                            <input type="text" id="input-alt" maxlength="4" placeholder="Altura" />
+                            <label for="input" class="input-label">x</label>
+                            <input type="text" id="input-larg" maxlength="4" placeholder="Largura" />
+                            <label for="input" class="input-label" style="justify-content: right;">mm</label>
+                        </div>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Instalação</label>
+
+                        <select id="installation" class="options" onchange="showDivInstalation()">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Veículos</option>
+                            <option value="2">Outros</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="fieldset-content-vehicle">
+
+                        <label for="select" class="lbl-attributes"></label>
+
+                        <fieldset>
+                            
+                            <legend>Informações básicas do veículo</legend>
+    
+                            <div class="fieldset-text">
+                                <p>Para calcular as medidas necessárias para adesivar um veículo, é importante ter algumas informações básicas sobre o veículo. Com essas informações básicas, é possível calcular as dimensões exatas e a quantidade de material necessário para adesivar o veículo de forma eficiente e adequada ao seu propósito.</p>
+                            </div>
+    
+                            <div class="input-content">
+    
+                                <label for="input" class="lbl-attributes">Marca</label>
+                                
+                                <div class="input-measures">
+                                    <input type="text" id="brand"/>                        
+                                </div>
+        
+                            </div>
+        
+                            <div class="input-content">
+        
+                                <label for="input" class="lbl-attributes">Modelo</label>
+                                
+                                <div class="input-measures">
+                                    <input type="text" id="model"/>                        
+                                </div>
+        
+                            </div>
+        
+                            <div class="input-content">
+        
+                                <label for="input" class="lbl-attributes">Ano</label>
+                                
+                                <div class="input-measures">
+                                    <input type="text" id="year" maxlength="4"/>                        
+                                </div>
+        
+                            </div>
+        
+                            <div class="input-content">
+        
+                                <label for="input" class="lbl-attributes">Cor</label>
+                                
+                                <div class="input-measures">
+                                    <input type="text" id="color"/>                        
+                                </div>
+        
+                            </div>
+    
+                        </fieldset>
+
+                    </div>
+
+                    <div class="others">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes"></label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-installation" style="text-align: left;" placeholder="Ex: lojas, escritórios, residências, vitrines, etc."/>                        
+                            </div>
+    
+                        </div>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+
+                        <div class="quantity-container">
+                            <button type="button" onclick="adjust_quantity(-1)">-</button>
+                            <input type="text" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">               
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD. Caso não tenha o seu design não se preocupe, a PostArt cria tudo pra você!</p>                       
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input type="text" id="name" name="name" style="text-transform: capitalize;">
+            </div>
+
+            <div class="email-phone-content">
+
+                <div class="form-group" id="group-email">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group" id="group-phone">
+                    <label for="phone">Telefone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Adesivo</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad iusto fuga nisi magni iste soluta accusamus voluptates eius corporis, cumque sapiente impedit quidem vitae accusantium commodi in deserunt dolorem minima.</p>        
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>A PostArt conta com diversos tamanhos para impressão de Adesivo. Você também pode escolher o tamanho de sua preferência informando (Altura x Largura).</p>
+                        <p><span>Ex: 45 x 51 cm</span></p> 
+
+                    </div>  
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Impressão</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae facere natus adipisci quos eligendi culpa, aut reiciendis distinctio. Iusto aliquam similique sit optio qui veritatis neque doloribus incidunt ullam.</p>
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Acabamento</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque aspernatur ipsum unde cumque quae repudiandae a repellat voluptatibus beatae dicta ipsam sit quam consequuntur facilis reiciendis! Dolorem, eius alias.</p>
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button style="margin-bottom: 0px;" class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>O preço do serviço varia em função da quantidade encomendada.</p>                                                                  
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>

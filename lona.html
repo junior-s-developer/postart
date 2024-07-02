@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Lona</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Lona</h1>
+            <div class="description-product">Alcance um elevado número de pessoas com as suas lonas e garanta sucesso ao divulgar a sua mensagem!
+            </div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/lona.png" alt="Lona">
+            </div>
+
+            <form class="form-product" name="form-product">
+
+                <div class="product">
+
+                    <div class="input-content">
+
+                        <label for="input" class="lbl-attributes">Tamanho</label>
+                        
+                        <div class="input-measures">
+                            <input type="text" id="input-alt" maxlength="4" placeholder="Altura" />
+                            <label for="input" class="input-label">x</label>
+                            <input type="text" id="input-larg" maxlength="4" placeholder="Largura" />
+                            <label for="input" class="input-label" style="justify-content: right;">mm</label>
+                        </div>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Material</label>
+
+                        <select id="material" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Lona Fosca 280g</option>
+                            <option value="2">Lona Back Light</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Acabamento</label>
+
+                        <select id="finishing" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Impressão Sem Acabameto</option>
+                            <option value="2">Esticar Em Estrutura (Borda Infinita)</option>
+                            <option value="3">Com Ilhos</option>
+                            <option value="4">Refilada Rente</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+
+                        <div class="quantity-container">
+                            <button type="button" onclick="adjust_quantity(-1)">-</button>
+                            <input type="text" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD. Caso não tenha o seu design não se preocupe, a PostArt cria tudo pra você!</p>
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form method="#" action="#">
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input type="text" id="name" name="name" style="text-transform: capitalize;">
+            </div>
+
+            <div class="email-phone-content">
+
+                <div class="form-group" id="group-email">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group" id="group-phone">
+                    <label for="phone">Telefone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>   
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Lona</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+                
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>A Lona contém ilhos para fixa-lo em um local desejável.</p>        
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>A PostArt conta com diversos tamanhos de Lona. Você também pode escolher o tamanho de sua preferência informando (Altura x Largura).</p>
+                        <p><span>Ex: 1000 x 2000 mm</span></p>   
+    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Material</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                        <p><strong>Lona Brilho 440g:</strong> É resistente às variações de temperatura e é impermeável; permite obter um efeito brilhante, próprio para designs com muitas cores.</p>             
+                        <p><strong>Lona Fosca 280g:</strong> Idêntico às características da Lona Brilho, embora o efeito seja matificado, sem brilho. Este material é recomendado para designs com texto.</p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Impressão</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                        <p>Cores, só frente - Impresso apenas do lado exposto, ficando o verso da Lona vazio, este será fixado em alguma superfície desejada.</p><br>
+                        <p><strong>Tecnologia de Impressão:</strong></p>
+                        <p>A impressão digital é o método que utilizado para a impressão da sua Lona. Para além de permitir obter um produto impresso de elevada qualidade, esta tecnologia de impressão possibilita comprar pequenas quantidades.</p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Acabamento</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>Dependendo do efeito para o qual irá utilizar sua Lona tem a possibilidade de adicionar o seguinte extra:</p><br>                   
+                        <p><strong>Lona com ilhós: </strong>Aros circulares de metal usados para reforçar o orifício por onde passam cordas ou outros materiais semelhantes. Esta opção é recomendada se pretender afixar e/ou pendurar a Lona personalizada. Para garantir maior resistência da fixação, disponibilizamos um ilhó para cada 70 cm, com um mínimo de 4 ilhós.</p><br>    
+                        <p><span>Atenção: Os aros circulares têm um diâmetro de 2,5 cm e são colocados a 1,5 cm de distância da extremidade da Lona. Assim, no momento de criar o seu design, não coloque conteúdo importante nessa área.</span></p>
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+            
+            <div style="margin-bottom: 0px;" class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+                        
+                        <p>O preço do produto personalizado varia em função da quantidade encomendada.</p>   
+                    
+                    </div>  
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</body>
+
+</html>

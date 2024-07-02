@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Adesivo Vinil</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Adesivo Vinil</h1>
+            <div class="description-product">O Adesivo Vinil Publicitário são uma ótima forma de captar a atenção dos seu
+                clientes e colaboradores. Personalize as suas Adesivo Vinil com um design criativo.
+            </div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/ads-personalizado.png" alt="Vinil Personalizado">
+            </div>
+
+            <form class="form-product" name="form">
+
+                <div class="product">
+
+                    <div class="input-content">
+
+                        <label for="input" class="lbl-attributes">Tamanho</label>
+                        
+                        <div class="input-measures">
+                            <input type="text" id="input-alt" maxlength="4" placeholder="Altura" />
+                            <label for="input" class="input-label">x</label>
+                            <input type="text" id="input-larg" maxlength="4" placeholder="Largura" />
+                            <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                        </div>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Material</label>
+
+                        <select id="material" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Branco Brilho</option>
+                            <option value="2">Branco Fosco</option>
+                            <option value="3">Transparente</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="select" class="lbl-attributes">Acabamento</label>
+
+                        <select id="finishing" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Corte De Contorno</option>
+                            <option value="2">Sem Recorte</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="select">
+
+                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+
+                        <div class="quantity-container">
+                            <button type="button" onclick="adjust_quantity(-1)">-</button>
+                            <input type="text" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">               
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD. Caso não tenha o seu design não se preocupe, a PostArt cria tudo pra você!</p>                       
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nome Completo *</label>
+                <input type="text" id="name" name="name" style="text-transform: capitalize;">
+            </div>
+
+            <div class="email-phone-content">
+
+                <div class="form-group" id="group-email">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="form-group" id="group-phone">
+                    <label for="phone">Telefone *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Adesivo</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>O adesivo pode ser utilizado em uma ampla gama de superfícies, como  vidro, plástico, madeira e fachadas e até embalagens, tornando-o adequado para uma variedade de aplicações criativas.</p>        
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>A PostArt conta com diversos tamanhos para impressão de Adesivo. Você também pode escolher o tamanho de sua preferência informando (Altura x Largura).</p>
+                        <p><span>Ex: 45 x 51 cm</span></p> 
+
+                    </div>  
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Material</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>Na PostArt é utilizado o papel adesivo 190g, permitido uma afixação do Adesivo em qualquer superfície.</p>
+                        <p><strong>Indicações de uso: </strong>Não recomendado para utilização em ambientes externos (vitrines e latarias de carro), devido à exposição e às condições climáticas que podem danificar o material.</p>
+   
+                    </div> 
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Impressão</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>Você pode optar pela opção colorida ou preto e branco quando fizer o orçamento do produto no site da PostArt, dependendo da sua necessidade.</p>
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Acabamento</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>Os Adesivos personalizados da PostArt têm um acabamento normal com um verniz de protecção. Este acabamento trata-se de uma aplicação de uma camada de verniz de protecção nos Adesivos.</p>
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button style="margin-bottom: 0px;" class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>O preço do produto personalizado varia em função da quantidade encomendada.</p>                                                                  
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
