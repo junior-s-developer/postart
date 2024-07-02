@@ -73,7 +73,7 @@ function showDivInstalation() {
 
     if(instalation.value === '1') {
         fieldset_content_vehicle.style.display = 'flex';
-        content_vehicle_atributs_select.style.display = 'flex';
+        content_vehicle_atributs_select.style.display = 'block';
         others.style.display = 'none';
     } else if(instalation.value === '2') {
         others.style.display = 'block';

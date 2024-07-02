@@ -232,7 +232,7 @@ fieldset .input-measures input {
 }
 
 .content-vehicle-atributs-select .select {
-    display: block;
+    /*display: block;*/
 }
 
 .content-vehicle-atributs-select .select:last-child {
@@ -240,8 +240,8 @@ fieldset .input-measures input {
  }
 
 .content-select-vehicle .select-vehicle .lbl-attributes {
-    width: 100%;
-    height: 100%;
+    /*width: 100%;
+    height: 100%;*/
     margin-bottom: 5px;
     /*border: solid 1px red;*/
 }
