@@ -15,6 +15,7 @@
     --color-neutral-110: #425B76;;
     --color-neutral-120: #FDB913;
     --color-neutral-130: #F5F5F7;
+    --color-neutral-140: #ccc;
 }
 
 * {
@@ -253,6 +254,10 @@ fieldset .input-measures input {
 
 .input-measures input:focus-visible {
     outline: none;
+}
+
+input::placeholder {
+color: var(--color-neutral-140);
 }
 
 .input-content .input-label {
