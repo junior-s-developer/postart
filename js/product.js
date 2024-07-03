@@ -65,24 +65,29 @@ document.addEventListener('input', function(event) {
 
 function showDivInstalation() {
 
-    var Purpose_use = document.getElementById('purpose-use');
+    var purpose_use = document.getElementById('purpose-use');
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
-    var content_vehicle_atributs_select = document.querySelector('.content-vehicle-atributs-select');
-    var others = document.querySelector('.others');
+    var others = document.getElementById('others');
     var input_others = document.getElementById('input-others');
+    var area_content = document.getElementById('area-content');
+    var goal_content = document.getElementById('goal-content');
 
-    if(Purpose_use.value === '1') {
+    if(purpose_use.value === '1') {
+
         fieldset_content_vehicle.style.display = 'flex';
+        area_content.style.display = 'flex';
+        goal_content.style.display = 'flex';
         others.style.display = 'none';
-        content_vehicle_atributs_select.style.display = 'block';
-    } else if(Purpose_use.value === '2') {
-        others.style.display = 'block';
+
+    } else if(purpose_use.value === '2') {
+        
+        others.style.display = 'flex';
         fieldset_content_vehicle.style.display = 'none';
+        area_content.style.display = 'none';
+        goal_content.style.display = 'none';
         input_others.focus();
-        content_vehicle_atributs_select.style.display = 'none';
     }
 }
-
 
 // Quantity
 
@@ -106,7 +111,6 @@ function handleInput(input) {
 // Required fields
 
 function validarInput() {
-    
     var input_alt = document.getElementById('input-alt');
     var input_larg = document.getElementById('input-larg');
     var material = document.getElementById('material');
@@ -120,97 +124,134 @@ function validarInput() {
     var goal = document.getElementById('goal');
     var purpose_use = document.getElementById('purpose-use');
     var application = document.getElementById('application');
+    var others = document.getElementById('others');
+    var input_others = document.getElementById('input-others');
     var quantity = document.getElementById('quantity');
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var phone = document.getElementById('phone');
     var phonePattern = /^\(\d{2}\) \d{4}-\d{4}$/;
-    var input_installation = document.getElementById('input-installation');
 
     if (input_alt && !input_alt.value.trim()) {
         alert('Informe o valor da altura.');
         input_alt.focus();
         return false;
-    } else if (input_larg && !input_larg.value.trim()) {
+    }
+
+    if (input_larg && !input_larg.value.trim()) {
         alert('Informe o valor da largura.');
         input_larg.focus();
         return false;
-    } else if (material && material.value === '') {
+    }
+
+    if (material && material.value === '') {
         alert('Escolha o tipo de material.');
         material.focus();
         return false;
-    } else if (finishing && finishing.value === '') {
+    }
+
+    if (finishing && finishing.value === '') {
         alert('Escolha o tipo de acabamento.');
         finishing.focus();
         return false;
-    } else if (purpose_use && purpose_use.value === '') {
+    }
+
+    if (purpose_use && purpose_use.value === '') {
         alert('Escolha a finalidade de uso.');
         purpose_use.focus();
         return false;
-    } else if(fieldset_content_vehicle.style.display === 'flex' || fieldset_content_vehicle.style.display === 'block') {
-        
+    }
+
+    if (fieldset_content_vehicle && fieldset_content_vehicle.style.display != 'none') {
         if (brand && !brand.value.trim()) {
             alert('Informe a marca do veículo.');
             brand.focus();
             return false;
-        } else if (model && !model.value.trim()) {
+        }
+
+        if (model && !model.value.trim()) {
             alert('Informe o modelo do veículo.');
             model.focus();
             return false;
-        } else if (year && (!year.value.trim() || year.value.trim().length < 4)) {
+        }
+
+        if (year && (!year.value.trim() || year.value.trim().length < 4)) {
             alert('Informe o ano do veículo corretamente com 4 dígitos.');
             year.focus();
             return false;
-        } else if (color && !color.value.trim()) {
+        }
+
+        if (color && !color.value.trim()) {
             alert('Informe a cor do veículo.');
             color.focus();
             return false;
-        } else if (area && area.value === '') {
+        }
+
+        if (area && area.value === '') {
             alert('Escolha a área do veículo a ser adesivada.');
             area.focus();
             return false;
-        } else if (goal && goal.value === '') {
+        }
+
+        if (goal && goal.value === '') {
             alert('Selecione o objetivo da adesivação do veículo.');
             goal.focus();
             return false;
-        } else if (input_installation && !input_installation.value.trim()) {
+        }
+    }
+
+    if (others && others.style.display != 'none') {
+        if (input_others && !input_others.value.trim()) {
             alert('Informe o local da adesivação');
-            input_installation.focus();
+            input_others.focus();
             return false;
         }
+    }
 
-    } else if (application && application.value === '') {
+    if (application && application.value === '') {
         alert('Escolha quem realizará a aplicação do adesivo.');
         application.focus();
         return false;
-    } else if (quantity && (quantity.value === '0' || quantity.value === '')) {
+    }
+
+    if (quantity && (quantity.value === '0' || quantity.value === '')) {
         alert('A quantidade mínima de produto é 1.');
         quantity.focus();
         return false;
-    } else if (name && !name.value.trim()) {
+    }
+
+    if (name && !name.value.trim()) {
         alert('Digite seu nome.');
         name.focus();
         return false;
-    } else if (email && !email.value.trim()) {
+    }
+
+    if (email && !email.value.trim()) {
         alert('Digite seu email.');
         email.focus();
         return false;
-    } else if (email && !emailPattern.test(email.value.trim())) {
-        alert("Por favor, insira um endereço de email válido.");
+    }
+
+    if (email && !emailPattern.test(email.value.trim())) {
+        alert('Por favor, insira um endereço de email válido.');
         email.focus();
         return false;
-    } else if (phone && (!phone.value.trim() || phone.value.trim().length < 14)) {
+    }
+
+    if (phone && (!phone.value.trim() || phone.value.trim().length < 14)) {
         alert('Digite o número de telefone corretamente com 10 dígitos.');
         phone.focus();
         return false;
-    } else if (phone && !phonePattern.test(phone.value.trim())) {
-        alert("Por favor, insira um número de telefone válido no formato (XX) XXXX-XXXX.");
+    }
+
+    if (phone && !phonePattern.test(phone.value.trim())) {
+        alert('Por favor, insira um número de telefone válido no formato (XX) XXXX-XXXX.');
         phone.focus();
         return false;
-    } else {
-        return true;
     }
+
+    return true;
 }
 
 // progress bar

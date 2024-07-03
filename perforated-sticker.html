@@ -135,70 +135,55 @@
                         </fieldset>
                     </div>
 
-                    <div class="content-vehicle-atributs-select">
+                    <div id="others" class="input-content" style="display: none;">
 
-                        <!--<label for="select" id="lbl-attributes" class="lbl-attributes"></label>-->
-
-                        <div class="content-select-vehicle">
-    
-                            <div class="select-vehicle">
-    
-                                <div class="select">
-    
-                                    <label for="select" class="lbl-attributes">Área</label>
-            
-                                    <select id="area" class="options">
-            
-                                        <option value="" hidden>- Selecione uma opção -</option>
-                                        <option value="1">Capô</option>
-                                        <option value="2">Portas</option>
-                                        <option value="3">Teto</option>
-                                        <option value="4">Para-choques</option>
-                                        <option value="5">Porta-malas</option>
-                                        <option value="6">Vidros</option>
-                                        <option value="7">Laterais</option>
-                                        <option value="8">Espelhos Retrovisores</option>
-                                        <option value="9">Interior</option>
-                                        <option value="10">Todos exceto Interior</option>
-                                        <option value="11">Todos</option>
-            
-                                    </select>
-            
-                                </div>
-            
-                                <div class="select">
-            
-                                    <label for="select" class="lbl-attributes">Objetivo</label>
-            
-                                    <select id="goal" class="options">
-            
-                                        <option value="" hidden>- Selecione uma opção -</option>
-                                        <option value="1">Publicidade e Marketing</option>
-                                        <option value="2">Personalização Estética</option>
-                                        <option value="3">Identificação de Frota</option>
-                                        <option value="4">Patrocínio e Parcerias</option>
-                                        <option value="5">Promoção de Eventos</option>
-                                        <option value="6">Campanhas Temporárias</option>
-                                        <option value="7">Proteção da Pintura</option>
-            
-                                    </select>
-            
-                                </div>
-                            </div>
+                        <label for="input" class="lbl-attributes"></label>
+                        
+                        <div class="input-measures">
+                            <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: lojas, escritórios, residências, vitrines, etc."/>                        
                         </div>
+
                     </div>
 
-                    <div class="others">
+                    <div id="area-content" class="select" style="display: none;">
 
-                        <div class="input-content">
+                        <label for="select" class="lbl-attributes">Área</label>
 
-                            <label for="input" class="lbl-attributes"></label>
-                            
-                            <div class="input-measures">
-                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: lojas, escritórios, residências, vitrines, etc."/>                        
-                            </div>
-    
-                        </div>
+                        <select id="area" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Capô</option>
+                            <option value="2">Portas</option>
+                            <option value="3">Teto</option>
+                            <option value="4">Para-choques</option>
+                            <option value="5">Porta-malas</option>
+                            <option value="6">Vidros</option>
+                            <option value="7">Laterais</option>
+                            <option value="8">Espelhos Retrovisores</option>
+                            <option value="9">Interior</option>
+                            <option value="10">Todos exceto Interior</option>
+                            <option value="11">Todos</option>
+
+                        </select>
+
+                    </div>
+
+                    <div id="goal-content" class="select" style="display: none;">
+
+                        <label for="select" class="lbl-attributes">Objetivo</label>
+
+                        <select id="goal" class="options">
+
+                            <option value="" hidden>- Selecione uma opção -</option>
+                            <option value="1">Publicidade e Marketing</option>
+                            <option value="2">Personalização Estética</option>
+                            <option value="3">Identificação de Frota</option>
+                            <option value="4">Patrocínio e Parcerias</option>
+                            <option value="5">Promoção de Eventos</option>
+                            <option value="6">Campanhas Temporárias</option>
+                            <option value="7">Proteção da Pintura</option>
+
+                        </select>
 
                     </div>
 
@@ -233,7 +218,7 @@
                         <h2>Já tem o seu design?</h2>
 
                         <div class="info">               
-                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD. Caso não tenha o seu design não se preocupe, a PostArt cria tudo pra você!</p>                       
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD, com uma resolução mínima de 300 dpi e tamanho real do adesivo. Caso não tenha o seu design, não se preocupe, a PostArt cria tudo pra você!</p>                       
                         </div>
 
                         <span id="fileName">Nenhum arquivo selecionado</span>
@@ -317,8 +302,56 @@
 
                     <div class="description">
 
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad iusto fuga nisi magni iste soluta accusamus voluptates eius corporis, cumque sapiente impedit quidem vitae accusantium commodi in deserunt dolorem minima.</p>        
-                    
+                        <p>O adesivo perfurado é uma solução inovadora e versátil para diversas aplicações, oferecendo privacidade sem sacrificar a visibilidade. Ideal para vitrines, janelas, veículos e outras superfícies transparentes, este produto proporciona uma excelente performance visual e funcional.</p><br>        
+                        <p><strong>Composição e Estrutura</strong></p>
+                        <ul>
+                            <li><strong>1. Filme de PVC (Policloreto de Vinila)</strong></li>
+                            <li>Geralmente, é um filme de PVC microperfurado, com furos uniformemente distribuídos, cobrindo aproximadamente 50% da superfície.</li>
+                            <li>A espessura do filme varia de 80 a 150 microns, dependendo da aplicação e da durabilidade desejada.</li>
+                            <li><strong>2. Adesivo</strong></li>
+                            <li>A parte adesiva é geralmente feita de um adesivo acrílico de alta performance, que proporciona uma boa adesão às superfícies de vidro e é removível sem deixar resíduos.</li>
+                            <li>O adesivo pode ser permanente ou removível, dependendo da necessidade da aplicação.</li>
+                            <li><strong>3. Linear</strong></li>
+                            <li>O liner é uma camada de papel siliconado ou filme de poliéster que protege o adesivo até o momento da aplicação.</li>
+                            <li>Facilita o manuseio e a aplicação do adesivo.</li>
+                        </ul>
+                        <p><strong>Visibilidade</strong></p>
+                        <ul>
+                            <li>Permite a visão de dentro para fora, enquanto exibe a imagem impressa de fora para dentro.</li>
+                            <li>Reduz o calor e o brilho solar, proporcionando conforto térmico e visual.</li>
+                        </ul>
+                        <p><strong>Impressão</strong></p>
+                        <ul>
+                            <li>Compatível com várias técnicas de impressão digital, como solvente, eco-solvente, UV e látex.</li>
+                            <li>Alta qualidade de imagem e cores vibrantes.</li>
+                        </ul>
+                        <p><strong>Durabilidade</strong></p>
+                        <ul>
+                            <li>Resistente às intempéries, aos raios UV e à água, com uma durabilidade que pode variar de 1 a 3 anos em aplicações externas, dependendo da qualidade do material e das condições climáticas.</li>
+                        </ul>
+                        <p><strong>Facilidade de Aplicação</strong></p>
+                        <ul>
+                            <li>Pode ser aplicado e removido com facilidade, sem a necessidade de profissionais altamente especializados.</li>
+                            <li>Recomendado para superfícies lisas e limpas.</li>
+                        </ul>
+                        <p><strong>Aplicações Comuns</strong></p>
+                        <ul>
+                            <li><strong>1. Publicidade em Vitrines: </strong>Usado para exibir anúncios e promoções em lojas e estabelecimentos comerciais, aproveitando a superfície de vidro para comunicação visual sem obstruir completamente a visão.</li>
+                            <li><strong>2. Envelopamento de Veículos</strong>Aplicado em janelas de ônibus, vans e carros, permitindo publicidade móvel enquanto mantém a visibilidade interna.</li>
+                            <li><strong>3. Decoração de Ambientes</strong>Utilizado em escritórios e espaços comerciais para criar privacidade sem bloquear a luz natural.</li>
+                        </ul>
+                        <p><strong>Vantagens</strong></p>
+                        <ul>
+                            <li><strong>1. Versatilidade: </strong>Adequado para uma ampla variedade de aplicações, tanto internas quanto externas.</li>
+                            <li><strong>2. Funcionalidade: </strong>Combina publicidade eficaz com manutenção de visibilidade e entrada de luz.</li>
+                            <li><strong>3. Economia: </strong>Proporciona uma solução de marketing de custo relativamente baixo em comparação com outras formas de publicidade.</li>
+                        </ul>
+                        <p><strong>Considerações</strong></p>
+                        <ul>
+                            <li><strong>1. Manutenção: </strong>A limpeza deve ser feita com cuidado para evitar danificar o material.</li>
+                            <li><strong>2. Aplicação: </strong>É importante garantir que a superfície de aplicação esteja livre de poeira, sujeira e gorduras para garantir uma adesão adequada.</li>
+                        </ul>
+                        <p>O adesivo perfurado é uma solução eficiente e multifuncional para comunicação visual, oferecendo benefícios tanto estéticos quanto práticos em uma ampla gama de aplicações.</p>
                     </div>
 
                 </div>
@@ -339,8 +372,7 @@
 
                     <div class="description">
 
-                        <p>A PostArt conta com diversos tamanhos para impressão de Adesivo. Você também pode escolher o tamanho de sua preferência informando (Altura x Largura).</p>
-                        <p><span>Ex: 45 x 51 cm</span></p> 
+                        <p>Personalize o tamanho ideal para seu projeto. Insira a altura e largura desejadas em centímetros para obter um adesivo que se encaixa perfeitamente nas suas necessidades.</p>
 
                     </div>  
 
@@ -352,7 +384,7 @@
 
                 <button class="toggle">
 
-                    <h4>Impressão</h4>
+                    <h4>Finalidade De Uso</h4>
                     <i class="fa-solid fa-chevron-down"></i>      
                     <i class="fa-solid fa-chevron-up"></i> 
 
@@ -362,8 +394,19 @@
 
                     <div class="description">
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quae facere natus adipisci quos eligendi culpa, aut reiciendis distinctio. Iusto aliquam similique sit optio qui veritatis neque doloribus incidunt ullam.</p>
-                    
+                        <p><strong>Veículos: </strong>Ideal para envelopamento parcial, oferecendo visibilidade interna enquanto exibe publicidade ou design externo.</p>
+                        
+                        <ul>
+                            <li>Para calcular as medidas necessárias para adesivar um veículo, é importante ter algumas informações básicas sobre o veículo contento (Marca, modelo, ano e cor).</li>
+                            <li><strong>Área De Adesivação: </strong>Informar se o adesivo será aplicado no vidro traseiro, vidros laterais, ou em outra área específica do veículo.</li>
+                            <li><strong>Objetivo: </strong>Finalidade do adesivo (publicidade, proteção solar, decoração, etc.), pois isso pode influenciar o tipo de material ou design escolhido.</li>
+                            <li>Com essas informações básicas, é possível calcular as dimensões exatas e a quantidade de material necessário para adesivar o veículo de forma eficiente e adequada ao seu propósito.</li>
+                        
+                        </ul>   
+
+                        <p><strong>Vitrines: </strong>Perfeito para lojas, permitindo a visualização de dentro para fora sem comprometer a comunicação visual externa.</p>
+                        <p><strong>Espaços Comerciais: </strong>Aplicável em escritórios e estabelecimentos para promover campanhas ou criar privacidade sem perder a luminosidade.</p>
+                        <p><strong>Residências: </strong>Use em janelas ou portas de vidro para decoração personalizada ou privacidade.</p>
                     </div>
 
                 </div>
@@ -374,7 +417,7 @@
 
                 <button class="toggle">
 
-                    <h4>Acabamento</h4>
+                    <h4>Aplicação</h4>
                     <i class="fa-solid fa-chevron-down"></i>      
                     <i class="fa-solid fa-chevron-up"></i>  
 
@@ -384,8 +427,11 @@
 
                     <div class="description">
 
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, neque aspernatur ipsum unde cumque quae repudiandae a repellat voluptatibus beatae dicta ipsam sit quam consequuntur facilis reiciendis! Dolorem, eius alias.</p>
-                    
+                        <p><strong>Equipe Especializada: </strong>Profissionais qualificados para uma aplicação perfeita.</p>
+                        <p><strong>Agendamento Flexível: </strong>Horários convenientes para você.</p>
+                        <p><strong>Garantia de Qualidade: </strong>Resultado impecável com acabamento garantido.</p><br>
+                        <p><span class="attention-title">Atenção: </span><span class="attention-text">Não nos responsabilizamos por eventuais falhas na aplicação feita pelo cliente.</span></p>
+
                     </div>
 
                 </div>
@@ -406,7 +452,9 @@
 
                     <div class="description">
 
-                        <p>O preço do serviço varia em função da quantidade encomendada.</p>                                                                  
+                        <p><strong>Pedidos Personalizados: </strong>Escolha a quantidade que melhor atende às suas necessidades, seja para pequenos projetos ou grandes campanhas publicitárias.</p>
+                        <p><strong>Descontos Progressivos: </strong>Aproveite nossos preços competitivos com descontos especiais para compras em grande escala.</p>  
+                        <p><strong>Gestão de Estoque: </strong>Estoque sempre atualizado para atender pedidos de qualquer tamanho com rapidez e eficiência.</p>                                                                    
                     
                     </div>
 

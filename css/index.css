@@ -215,10 +215,6 @@
     justify-content: center;
 }
 
-#image-mobile-texto {
-    display: none;
-}
-
 #section-home button {
     display: flex;
     border: none;
@@ -251,7 +247,7 @@
     border-radius: 20px;
 }
 
-/*Serviços em destaque*/
+/*Servi├ºos em destaque*/
 
 #cards h3 {
     font-family: "Lobster", sans-serif;
@@ -620,4 +616,4 @@ footer #copyright {
     right: 20px;
     position: fixed;
     bottom: 20px;
-}
+} 

@@ -710,7 +710,7 @@
     }
 }
 
-/*Serviços em destaque*/
+/*Servi├ºos em destaque*/
 
 @media screen and (min-width: 240px) and (max-width: 320px) {
 
@@ -777,7 +777,7 @@
     }*/
 }
 
-/*rodapé*/
+/*rodap├®*/
 
 @media screen and (max-width: 319px) {
 
@@ -1111,4 +1111,4 @@
         bottom: 31px;
         right: 24px;
     }
-}
+} 

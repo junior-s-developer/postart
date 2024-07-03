@@ -21,10 +21,6 @@
         padding: 0px 20px 40px 20px;
     }
 
-    .description-banner {
-        margin-bottom: 40px;
-    }
-
     #content-product {
         display: block;
     }
@@ -69,14 +65,6 @@
         display: none;
     }
 
-    .content-vehicle-atributs-select #lbl-attributes {
-        display: none;
-    }
-
-    .others .lbl-attributes{
-        display: none;
-    }
-
     .email-phone-content {
         display: block;
     }
@@ -106,10 +94,6 @@
 
     #main-product {
         padding: 0px 20px 40px 20px;
-    }
-
-    .description-banner {
-        margin-bottom: 40px;
     }
 
     #content-product {
@@ -155,10 +139,6 @@
 
     #main-product {
         padding: 0px 20px 40px 20px;
-    }
-
-    .description-banner {
-        margin-bottom: 40px;
     }
 
     #content-product {
