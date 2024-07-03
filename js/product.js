@@ -121,7 +121,7 @@ function validarInput() {
     var goal = document.getElementById('goal');
     var purpose_use = document.getElementById('purpose-use');
     var application = document.getElementById('application');
-    var others = document.getElementById('others');
+    var others_content = document.querySelector('.others-content');
     var input_others = document.getElementById('input-others');
     var quantity = document.getElementById('quantity');
     var name = document.getElementById('name');
@@ -198,7 +198,7 @@ function validarInput() {
         }
     }
 
-    if (others && others.style.display != 'none') {
+    if (others_content && others_content.style.display != 'none') {
         if (input_others && !input_others.value.trim()) {
             alert('Informe o local da adesivação');
             input_others.focus();
