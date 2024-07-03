@@ -214,6 +214,14 @@ fieldset .input-measures input {
     text-align: left;
 }
 
+.others-content {
+    display: none;
+}
+
+.area-goal-content {
+    display: none;
+}
+
 .input-content {
     display: flex;
     margin-bottom: 20px;

@@ -67,24 +67,21 @@ function showDivInstalation() {
 
     var purpose_use = document.getElementById('purpose-use');
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
-    var others = document.getElementById('others');
+    var others_content = document.querySelector('.others-content');
     var input_others = document.getElementById('input-others');
-    var area_content = document.getElementById('area-content');
-    var goal_content = document.getElementById('goal-content');
+    var area_goal_content = document.querySelector('.area-goal-content');
 
     if(purpose_use.value === '1') {
 
         fieldset_content_vehicle.style.display = 'flex';
-        area_content.style.display = 'flex';
-        goal_content.style.display = 'flex';
-        others.style.display = 'none';
+        others_content.style.display = 'none';
+        area_goal_content.style.display = 'block';
 
     } else if(purpose_use.value === '2') {
         
-        others.style.display = 'flex';
+        others_content.style.display = 'block';
         fieldset_content_vehicle.style.display = 'none';
-        area_content.style.display = 'none';
-        goal_content.style.display = 'none';
+        area_goal_content.style.display = 'none';
         input_others.focus();
     }
 }
