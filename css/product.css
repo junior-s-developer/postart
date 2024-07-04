@@ -168,7 +168,6 @@ fieldset {
     gap: 10px;
     padding: 20px;
     border-radius: 5px;
-    text-align: right;
     font-size: 0.75rem;
     background-color: var(--color-neutral-130);
     /*border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));*/
@@ -176,6 +175,7 @@ fieldset {
 }
 
 legend {
+    text-align: right;
     padding: 5px;
     background-color: white;
     border-radius: 5px;
@@ -506,6 +506,12 @@ color: var(--color-neutral-140);
     /*border: solid 1px red;*/
 }
 
+form .form-fieldset {
+    display: block;
+    margin-bottom: 20px;
+    /*border: solid 1px red;*/
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -545,7 +551,7 @@ textarea {
     font-weight: 400;
 }
 
-.email-phone-content {
+.form-group-content {
     display: flex;
     gap: 10px;
     /*border: solid 1px red;*/
@@ -557,6 +563,34 @@ textarea {
 
 #group-phone {
     width: 40%;
+}
+
+#group-public_place {
+    width: 80%;
+}
+
+#group-number {
+    width: 20%;
+}
+
+#group-complement {
+    width: 40%;
+}
+
+#group-neighborhood {
+    width: 60%;
+}
+
+#group-city {
+    width: 50%;
+}
+
+#group-state {
+    width: 30%;
+}
+
+#group-cep {
+    width: 20%;
 }
 
 .form-group input:hover,

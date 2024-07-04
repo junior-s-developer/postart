@@ -147,24 +147,82 @@
                 <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
             </div>
 
-            <div class="form-group">
-                <label for="name">Nome Completo *</label>
-                <input type="text" id="name" name="name" style="text-transform: capitalize;">
-            </div>
+            <fieldset>
 
-            <div class="email-phone-content">
+                <legend>Dados Pessoais</legend>
 
-                <div class="form-group" id="group-email">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" style="text-transform: capitalize;">
+                </div>
+    
+                <div class="form-group-content">
+    
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+    
+                    <div class="form-group" id="group-phone">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                    </div>
+    
+                </div>
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Endereço</legend>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-public_place">
+                        <label for="public_place">Logradouro</label>
+                        <input type="text" id="public_place" name="public_place" placeholder="Ex: rua, avenida, travessa, praça, etc.">
+                    </div>
+    
+                    <div class="form-group" id="group-number">
+                        <label for="number">Número</label>
+                        <input type="tel" id="number" name="number">
+                    </div>
+
                 </div>
 
-                <div class="form-group" id="group-phone">
-                    <label for="phone">Telefone *</label>
-                    <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-complement">
+                        <label for="complement">Complemento</label>
+                        <input type="text" id="complement" name="complement" placeholder="Ex: casa, apartamento, sala, etc.">
+                    </div>
+    
+                    <div class="form-group" id="group-neighborhood">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" name="neighborhood">
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-city">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+    
+                    <div class="form-group" id="group-state">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state">
+                    </div>
+    
+                    <div class="form-group" id="group-cep">
+                        <label for="cep">CEP</label>
+                        <input type="tel" id="cep" name="cep">
+                    </div>
+
+                </div>
+                
+            </fieldset>
 
             <div class="form-group">
                 <label for="observation">Observação <span>(Opcional)</span></label>
@@ -174,6 +232,7 @@
             <button type="button" class="custom-button" onclick="validarInput()">
                 <p class="buttom-title">Enviar</p>
             </button>
+
         </form>
 
         <div class="product-description">

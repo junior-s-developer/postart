@@ -65,7 +65,7 @@
         display: none;
     }
 
-    .email-phone-content {
+    .form-group-content {
         display: block;
     }
 
@@ -74,6 +74,34 @@
     }
 
     #group-phone {
+        width: 100%;
+    }
+
+    #group-public_place {
+        width: 100%;
+    }
+    
+    #group-number {
+        width: 100%;
+    }
+    
+    #group-complement {
+        width: 100%;
+    }
+    
+    #group-neighborhood {
+        width: 100%;
+    }
+    
+    #group-city {
+        width: 100%;
+    }
+    
+    #group-state {
+        width: 100%;
+    }
+    
+    #group-cep {
         width: 100%;
     }
 
