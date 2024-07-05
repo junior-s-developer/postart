@@ -105,6 +105,10 @@
         width: 100%;
     }
 
+    .form-group span {
+        font-size: 0.5rem;
+    }
+
     .custom-button:hover {
         background-color: var(--color-neutral-50);
     }
@@ -188,6 +192,10 @@
     
     #group-cep {
         width: 100%;
+    }
+
+    .form-group span {
+        font-size: 0.5rem;
     }
 
     .custom-button:hover {
