@@ -107,6 +107,26 @@ function handleInput(input) {
 
 // Required fields
 
+function showAlert(alert, message) {
+
+    var alert = document.getElementById(alert);
+
+    alert.textContent = message;
+    alert.style.display = 'block';
+
+}
+
+function hideAlert(input, alert) {
+
+    var input = document.getElementById(input);
+    var alert = document.getElementById(alert);
+
+    input.addEventListener('blur', function() {
+
+        alert.style.display = 'none';
+    });
+}
+
 function validarInput() {
 
     var input_alt = document.getElementById('input-alt');
@@ -243,84 +263,96 @@ function validarInput() {
 
     if (name && !name.value.trim()) {
 
-        alert('Digite seu nome.');
+        showAlert('name-alert', 'Digite seu nome.');
+        hideAlert('name', 'name-alert');
         name.focus();
         return false;
     }
 
     if (email && !email.value.trim()) {
 
-        alert('Digite seu email.');
+        showAlert('email-alert', 'Digite seu email.');
+        hideAlert('email', 'email-alert');
         email.focus();
         return false;
     }
 
     if (email && !emailPattern.test(email.value.trim())) {
 
-        alert('Por favor, insira um endereço de email válido.');
+        showAlert('email-alert', 'Por favor, insira um endereço de email válido.');
+        hideAlert('email', 'email-alert');
         email.focus();
         return false;
     }
 
     if (phone && !phone.value.trim()) {
         
-        alert('Digite o número de telefone.');
+        showAlert('phone-alert', 'Digite o seu número de telefone.');
+        hideAlert('phone', 'phone-alert');
         phone.focus();
         return false;
     }
 
     if (phone && !phonePattern.test(phone.value.trim())) {
         
-        alert('Por favor, insira um número de telefone válido no formato (XX) XXXX-XXXX.');
+        showAlert('phone-alert', 'Por favor, insira um número de telefone válido no formato (XX) XXXX-XXXX.');
+        hideAlert('phone', 'phone-alert');
         phone.focus();
         return false;
     }
 
     if (public_place && !public_place.value.trim()) {
 
-        alert('Informe o logradouro.');
+        showAlert('public_place-alert', 'Informe o logradouro.');
+        hideAlert('public_place', 'public_place-alert');
         public_place.focus();
         return false;
     }
 
     if (number && !number.value.trim()) {
 
-        alert('Digite o número da residência.');
+        showAlert('number-alert', 'Digite o número da residência.');
+        hideAlert('number', 'number-alert');
         number.focus();
         return false;
     }
 
     if (neighborhood && !neighborhood.value.trim()) {
 
-        alert('Informe o bairro.');
+        showAlert('neighborhood-alert', 'Informe o bairro.');
+        hideAlert('neighborhood', 'neighborhood-alert');
         neighborhood.focus();
         return false;
     }
 
     if (city && !city.value.trim()) {
         
-        alert('Informe a cidade.');
+        showAlert('city-alert', 'Informe a cidade.');
+        hideAlert('city', 'city-alert');
         city.focus();
         return false;
     }
 
     if (state && !state.value.trim()) {
 
-        alert('Informe o estado.');
+        showAlert('state-alert', 'Informe o estado.');
+        hideAlert('state', 'state-alert');
         state.focus();
         return false;
     }
 
     if(cep && !cep.value.trim()) {
 
-        alert('Informe o CEP.');
+        showAlert('cep-alert', 'Informe o CEP.');
+        hideAlert('cep', 'cep-alert');
         cep.focus();
         return false;
     }
 
     if (cepPattern && !cepPattern.test(cep.value)) {
 
-        alert('Por favor, preencha um CEP válido.');
+        showAlert('cep-alert', 'Por favor, preencha um CEP válido.');
+        hideAlert('cep', 'cep-alert');
         cep.focus();
         return false;
     }

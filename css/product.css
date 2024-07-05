@@ -516,6 +516,7 @@ form .form-fieldset {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 20px;
     /*border: solid 1px rgb(68, 0, 255);*/
 }
 
@@ -538,7 +539,7 @@ textarea {
     border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     font-size: 0.875rem;
     color: var(--color-neutral-70);
-    margin-bottom: 20px;
+    text-transform: capitalize;
     /*border: solid 1px rgb(0, 166, 255);*/
 }
 
@@ -598,6 +599,13 @@ textarea {
 textarea:hover {
     border-color: var(--color-neutral-50);
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 3px;
+    display: none;
+  }
 
 .product-description {
     margin: 40px 0px 20px 0px;
