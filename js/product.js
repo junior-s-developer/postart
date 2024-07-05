@@ -108,6 +108,7 @@ function handleInput(input) {
 // Required fields
 
 function validarInput() {
+
     var input_alt = document.getElementById('input-alt');
     var input_larg = document.getElementById('input-larg');
     var material = document.getElementById('material');
@@ -129,69 +130,88 @@ function validarInput() {
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     var phone = document.getElementById('phone');
     var phonePattern = /^\(\d{2}\) \d{4}-\d{4}$/;
+    var public_place = document.getElementById('public_place');
+    var number = document.getElementById('number');
+    var neighborhood = document.getElementById('neighborhood');
+    var city = document.getElementById('city');
+    var state = document.getElementById('state');
+    var cep = document.getElementById('cep');
+    var cepPattern = /^[0-9]{5}-?[0-9]{3}$/;
 
     if (input_alt && !input_alt.value.trim()) {
+     
         alert('Informe o valor da altura.');
         input_alt.focus();
         return false;
     }
 
     if (input_larg && !input_larg.value.trim()) {
+      
         alert('Informe o valor da largura.');
         input_larg.focus();
         return false;
     }
 
     if (material && material.value === '') {
+      
         alert('Escolha o tipo de material.');
         material.focus();
         return false;
     }
 
     if (finishing && finishing.value === '') {
+      
         alert('Escolha o tipo de acabamento.');
         finishing.focus();
         return false;
     }
 
     if (purpose_use && purpose_use.value === '') {
+       
         alert('Escolha a finalidade de uso.');
         purpose_use.focus();
         return false;
     }
 
     if (fieldset_content_vehicle && fieldset_content_vehicle.style.display != 'none') {
+        
         if (brand && !brand.value.trim()) {
+            
             alert('Informe a marca do veículo.');
             brand.focus();
             return false;
         }
 
         if (model && !model.value.trim()) {
+            
             alert('Informe o modelo do veículo.');
             model.focus();
             return false;
         }
 
         if (year && (!year.value.trim() || year.value.trim().length < 4)) {
+            
             alert('Informe o ano do veículo corretamente com 4 dígitos.');
             year.focus();
             return false;
         }
 
         if (color && !color.value.trim()) {
+            
             alert('Informe a cor do veículo.');
             color.focus();
             return false;
         }
 
         if (area && area.value === '') {
+            
             alert('Escolha a área do veículo a ser adesivada.');
             area.focus();
             return false;
         }
 
         if (goal && goal.value === '') {
+            
             alert('Selecione o objetivo da adesivação do veículo.');
             goal.focus();
             return false;
@@ -199,6 +219,7 @@ function validarInput() {
     }
 
     if (others_content && others_content.style.display != 'none') {
+        
         if (input_others && !input_others.value.trim()) {
             alert('Informe o local da adesivação');
             input_others.focus();
@@ -207,47 +228,104 @@ function validarInput() {
     }
 
     if (application && application.value === '') {
+        
         alert('Escolha quem realizará a aplicação do adesivo.');
         application.focus();
         return false;
     }
 
-    if (quantity && (quantity.value === '0' || quantity.value === '')) {
+    if (quantity && (quantity.value === '0')) {
+        
         alert('A quantidade mínima de produto é 1.');
         quantity.focus();
         return false;
     }
 
     if (name && !name.value.trim()) {
+
         alert('Digite seu nome.');
         name.focus();
         return false;
     }
 
     if (email && !email.value.trim()) {
+
         alert('Digite seu email.');
         email.focus();
         return false;
     }
 
     if (email && !emailPattern.test(email.value.trim())) {
+
         alert('Por favor, insira um endereço de email válido.');
         email.focus();
         return false;
     }
 
-    if (phone && (!phone.value.trim() || phone.value.trim().length < 14)) {
-        alert('Digite o número de telefone corretamente com 10 dígitos.');
+    if (phone && !phone.value.trim()) {
+        
+        alert('Digite o número de telefone.');
         phone.focus();
         return false;
     }
 
     if (phone && !phonePattern.test(phone.value.trim())) {
+        
         alert('Por favor, insira um número de telefone válido no formato (XX) XXXX-XXXX.');
         phone.focus();
         return false;
     }
 
+    if (public_place && !public_place.value.trim()) {
+
+        alert('Informe o logradouro.');
+        public_place.focus();
+        return false;
+    }
+
+    if (number && !number.value.trim()) {
+
+        alert('Digite o número da residência.');
+        number.focus();
+        return false;
+    }
+
+    if (neighborhood && !neighborhood.value.trim()) {
+
+        alert('Informe o bairro.');
+        neighborhood.focus();
+        return false;
+    }
+
+    if (city && !city.value.trim()) {
+        
+        alert('Informe a cidade.');
+        city.focus();
+        return false;
+    }
+
+    if (state && !state.value.trim()) {
+
+        alert('Informe o estado.');
+        state.focus();
+        return false;
+    }
+
+    if(cep && !cep.value.trim()) {
+
+        alert('Informe o CEP.');
+        cep.focus();
+        return false;
+    }
+
+    if (cepPattern && !cepPattern.test(cep.value)) {
+
+        alert('Por favor, preencha um CEP válido.');
+        cep.focus();
+        return false;
+    }
+
+    alert('Formulário enviado com sucesso!');
     return true;
 }
 
