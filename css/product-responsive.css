@@ -149,10 +149,6 @@
         font-size: 0.75rem;
     }
 
-    .quantity-container {
-        justify-content: left;
-    }
-
     fieldset {
         display: block;
     }
