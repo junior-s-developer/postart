@@ -67,7 +67,7 @@ function showDivInstalation() {
 
     var purpose_use = document.getElementById('purpose-use');
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
-    var others_content = document.querySelector('.others-content');
+    var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
     var area_goal_content = document.querySelector('.area-goal-content');
 
@@ -142,7 +142,7 @@ function validarInput() {
     var goal = document.getElementById('goal');
     var purpose_use = document.getElementById('purpose-use');
     var application = document.getElementById('application');
-    var others_content = document.querySelector('.others-content');
+    var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
     var quantity = document.getElementById('quantity');
     var name = document.getElementById('name');
@@ -183,15 +183,17 @@ function validarInput() {
     }
 
     if (finishing && finishing.value === '') {
-      
-        alert('Escolha o tipo de acabamento.');
+
+        showAlert('finishing-alert', 'Escolha o tipo de acabamento.');
+        hideAlert('finishing', 'finishing-alert');
         finishing.focus();
         return false;
     }
 
     if (purpose_use && purpose_use.value === '') {
        
-        alert('Escolha a finalidade de uso.');
+        showAlert('purpose-use-alert', 'Escolha a finalidade de uso.');
+        hideAlert('purpose-use', 'purpose-use-alert');
         purpose_use.focus();
         return false;
     }
@@ -200,42 +202,48 @@ function validarInput() {
         
         if (brand && !brand.value.trim()) {
             
-            alert('Informe a marca do veículo.');
+            showAlert('brand-alert', 'Informe a marca do veículo.');
+            hideAlert('brand', 'brand-alert');
             brand.focus();
             return false;
         }
 
         if (model && !model.value.trim()) {
             
-            alert('Informe o modelo do veículo.');
+            showAlert('model-alert', 'Informe o modelo do veículo.');
+            hideAlert('model', 'model-alert');
             model.focus();
             return false;
         }
 
         if (year && (!year.value.trim() || year.value.trim().length < 4)) {
             
-            alert('Informe o ano do veículo corretamente com 4 dígitos.');
+            showAlert('year-alert', 'Informe o ano do veículo corretamente com 4 dígitos.');
+            hideAlert('year', 'year-alert');
             year.focus();
             return false;
         }
 
         if (color && !color.value.trim()) {
             
-            alert('Informe a cor do veículo.');
+            showAlert('color-alert', 'Informe a cor do veículo.');
+            hideAlert('color', 'color-alert');
             color.focus();
             return false;
         }
 
         if (area && area.value === '') {
             
-            alert('Escolha a área do veículo a ser adesivada.');
+            showAlert('area-alert', 'Escolha a área do veículo a ser adesivada.');
+            hideAlert('area', 'area-alert');
             area.focus();
             return false;
         }
 
         if (goal && goal.value === '') {
             
-            alert('Selecione o objetivo da adesivação do veículo.');
+            showAlert('goal-alert', 'Selecione o objetivo da adesivação do veículo.');
+            hideAlert('goal', 'goal-alert');
             goal.focus();
             return false;
         }
@@ -244,7 +252,9 @@ function validarInput() {
     if (others_content && others_content.style.display != 'none') {
         
         if (input_others && !input_others.value.trim()) {
-            alert('Informe o local da adesivação');
+            
+            showAlert('input-others-alert', 'Informe o local da adesivação.');
+            hideAlert('input-others', 'input-others-alert');
             input_others.focus();
             return false;
         }
@@ -252,7 +262,8 @@ function validarInput() {
 
     if (application && application.value === '') {
         
-        alert('Escolha quem realizará a aplicação do adesivo.');
+        showAlert('application-alert', 'Escolha quem realizará a aplicação do adesivo.');
+        hideAlert('application', 'application-alert');
         application.focus();
         return false;
     }

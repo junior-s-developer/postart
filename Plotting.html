@@ -62,103 +62,164 @@
                             <div class="fieldset-text">
                                 <p>Para calcular as medidas necessárias para adesivar um veículo, é importante ter algumas informações básicas sobre o veículo. Com essas informações básicas, é possível calcular as dimensões exatas e a quantidade de material necessário para adesivar o veículo de forma eficiente e adequada ao seu propósito.</p>
                             </div>
+
+                            <div class="product-content">
+
+                                <div class="input-content">
     
-                            <div class="input-content">
-    
-                                <label for="input" class="lbl-attributes">Marca</label>
-                                
-                                <div class="input-measures">
-                                    <input type="text" id="brand"/>                        
+                                    <label for="input" class="lbl-attributes">Marca</label>
+                                    
+                                    <div class="input-measures">
+                                        <input type="text" id="brand"/>                        
+                                    </div>
+
                                 </div>
-        
+
+                                <div class="alert-message-content">
+                                    <span class="alert-message" id="brand-alert"></span>  
+                                </div>
+
                             </div>
+
+                            <div class="product-content">
+
+                                <div class="input-content">
         
-                            <div class="input-content">
-        
-                                <label for="input" class="lbl-attributes">Modelo</label>
-                                
-                                <div class="input-measures">
-                                    <input type="text" id="model"/>                        
+                                    <label for="input" class="lbl-attributes">Modelo</label>
+                                    
+                                    <div class="input-measures">
+                                        <input type="text" id="model"/>                        
+                                    </div>
+            
                                 </div>
-        
+
+                                <div class="alert-message-content">
+                                    <span class="alert-message" id="model-alert"></span>  
+                                </div>
+
                             </div>
+
+                            <div class="product-content">
+
+                                <div class="input-content">
         
-                            <div class="input-content">
-        
-                                <label for="input" class="lbl-attributes">Ano</label>
-                                
-                                <div class="input-measures">
-                                    <input type="tel" id="year" maxlength="4"/>                        
+                                    <label for="input" class="lbl-attributes">Ano</label>
+                                    
+                                    <div class="input-measures">
+                                        <input type="tel" id="year" maxlength="4"/>                        
+                                    </div>
+            
                                 </div>
-        
+
+                                <div class="alert-message-content">
+                                    <span class="alert-message" id="year-alert"></span>  
+                                </div>
+
                             </div>
+
+                            <div class="product-content">
+
+                                <div class="input-content">
         
-                            <div class="input-content">
-        
-                                <label for="input" class="lbl-attributes">Cor</label>
-                                
-                                <div class="input-measures">
-                                    <input type="text" id="color"/>                        
+                                    <label for="input" class="lbl-attributes">Cor</label>
+                                    
+                                    <div class="input-measures">
+                                        <input type="text" id="color"/>                        
+                                    </div>
+            
                                 </div>
-        
+
+                                <div class="alert-message-content">
+                                    <span class="alert-message" id="color-alert"></span>  
+                                </div>
+
                             </div>
     
                         </fieldset>
+                        
                     </div>
 
                     <div class="content-select-vehicle">
 
-                        <div class="select">
+                        <div class="product-content">
 
-                            <label for="select" class="lbl-attributes">Área</label>
+                            <div class="select">
+
+                                <label for="select" class="lbl-attributes">Área</label>
+        
+                                <select id="area" class="options">
+        
+                                    <option value="" hidden>- Selecione uma opção -</option>
+                                    <option value="1">Capô</option>
+                                    <option value="2">Portas</option>
+                                    <option value="3">Teto</option>
+                                    <option value="4">Para-choques</option>
+                                    <option value="5">Porta-malas</option>
+                                    <option value="6">Vidros</option>
+                                    <option value="7">Laterais</option>
+                                    <option value="8">Espelhos Retrovisores</option>
+                                    <option value="9">Interior</option>
+                                    <option value="10">Todos exceto Interior</option>
+                                    <option value="11">Todos</option>
+        
+                                </select>
+        
+                            </div>
+
+                            <div class="alert-message-content">
+                                <label for="input" class="lbl-attributes"></label>
+                                <span class="alert-message" id="area-alert"></span>  
+                            </div>
+
+                        </div>
+
+                        <div class="product-content">
+
+                            <div class="select">
     
-                            <select id="area" class="options">
-    
-                                <option value="" hidden>- Selecione uma opção -</option>
-                                <option value="1">Capô</option>
-                                <option value="2">Portas</option>
-                                <option value="3">Teto</option>
-                                <option value="4">Para-choques</option>
-                                <option value="5">Porta-malas</option>
-                                <option value="6">Vidros</option>
-                                <option value="7">Laterais</option>
-                                <option value="8">Espelhos Retrovisores</option>
-                                <option value="9">Interior</option>
-                                <option value="10">Todos exceto Interior</option>
-                                <option value="11">Todos</option>
-    
-                            </select>
-    
+                                <label for="select" class="lbl-attributes">Objetivo</label>
+        
+                                <select id="goal" class="options">
+        
+                                    <option value="" hidden>- Selecione uma opção -</option>
+                                    <option value="1">Publicidade e Marketing</option>
+                                    <option value="2">Personalização Estética</option>
+                                    <option value="3">Identificação de Frota</option>
+                                    <option value="4">Patrocínio e Parcerias</option>
+                                    <option value="5">Promoção de Eventos</option>
+                                    <option value="6">Campanhas Temporárias</option>
+                                    <option value="7">Proteção da Pintura</option>
+        
+                                </select>
+        
+                            </div>
+
+                            <div class="alert-message-content">
+                                <label for="input" class="lbl-attributes"></label>
+                                <span class="alert-message" id="goal-alert"></span>  
+                            </div>
+
                         </div>
     
-                        <div class="select">
-    
-                            <label for="select" class="lbl-attributes">Objetivo</label>
-    
-                            <select id="goal" class="options">
-    
-                                <option value="" hidden>- Selecione uma opção -</option>
-                                <option value="1">Publicidade e Marketing</option>
-                                <option value="2">Personalização Estética</option>
-                                <option value="3">Identificação de Frota</option>
-                                <option value="4">Patrocínio e Parcerias</option>
-                                <option value="5">Promoção de Eventos</option>
-                                <option value="6">Campanhas Temporárias</option>
-                                <option value="7">Proteção da Pintura</option>
-    
-                            </select>
-    
-                        </div>
                     </div>
 
-                    <div class="select">
+                    <div class="product-content">
 
-                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+                        <div class="select">
 
-                        <div class="quantity-container">
-                            <button type="button" onclick="adjust_quantity(-1)">-</button>
-                            <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
-                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                            <label for="quantity" class="lbl-attributes">Quantidade</label>
+    
+                            <div class="quantity-container">
+                                <button type="button" onclick="adjust_quantity(-1)">-</button>
+                                <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                                <button type="button" onclick="adjust_quantity(1)">+</button>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="quantity-alert" style="text-align: end;"></span>  
                         </div>
 
                     </div>

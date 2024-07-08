@@ -54,56 +54,97 @@
 
                 <div class="product">
 
-                    <div class="input-content">
+                    <div class="product-content">
 
-                        <label for="input" class="lbl-attributes">Tamanho</label>
-                        
-                        <div class="input-measures">
-                            <input type="tel" id="input-alt" maxlength="4" placeholder="Altura" />
-                            <label for="input" class="input-label">x</label>
-                            <input type="tel" id="input-larg" maxlength="4" placeholder="Largura" />
-                            <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Tamanho</label>
+                            
+                            <div class="input-measures">
+                                <input type="tel" id="input-alt" maxlength="4" placeholder="Altura" />
+                                <label for="input" class="input-label">x</label>
+                                <input type="tel" id="input-larg" maxlength="4" placeholder="Largura" />
+                                <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-alt-alert"></span>  
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-larg-alert"></span>  
                         </div>
 
                     </div>
 
-                    <div class="select">
+                    <div class="product-content">
 
-                        <label for="select" class="lbl-attributes">Material</label>
+                        <div class="select">
 
-                        <select id="material" class="options">
+                            <label for="select" class="lbl-attributes">Material</label>
+    
+                            <select id="material" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Branco Brilho</option>
+                                <option value="2">Branco Fosco</option>
+                                <option value="3">Transparente</option>
+    
+                            </select>
+    
+                        </div>
 
-                            <option value="" hidden>- Selecione uma opção -</option>
-                            <option value="1">Branco Brilho</option>
-                            <option value="2">Branco Fosco</option>
-                            <option value="3">Transparente</option>
-
-                        </select>
-
-                    </div>
-
-                    <div class="select">
-
-                        <label for="select" class="lbl-attributes">Acabamento</label>
-
-                        <select id="finishing" class="options">
-
-                            <option value="" hidden>- Selecione uma opção -</option>
-                            <option value="1">Corte De Contorno</option>
-                            <option value="2">Sem Recorte</option>
-
-                        </select>
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="material-alert"></span>  
+                        </div>
 
                     </div>
 
-                    <div class="select">
+                    <div class="product-content">
 
-                        <label for="quantity" class="lbl-attributes">Quantidade</label>
+                        <div class="select">
 
-                        <div class="quantity-container">
-                            <button type="button" onclick="adjust_quantity(-1)">-</button>
-                            <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
-                            <button type="button" onclick="adjust_quantity(1)">+</button>
+                            <label for="select" class="lbl-attributes">Acabamento</label>
+    
+                            <select id="finishing" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Corte De Contorno</option>
+                                <option value="2">Sem Recorte</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="finishing-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="quantity" class="lbl-attributes">Quantidade</label>
+    
+                            <div class="quantity-container">
+                                <button type="button" onclick="adjust_quantity(-1)">-</button>
+                                <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                                <button type="button" onclick="adjust_quantity(1)">+</button>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="quantity-alert" style="text-align: end;"></span>  
                         </div>
 
                     </div>
