@@ -34,6 +34,10 @@
         display: block;
     }
 
+    .alert-message-content .lbl-attributes {
+        display: none;
+    }
+
     .form-product .select {
         display: block;
     }
