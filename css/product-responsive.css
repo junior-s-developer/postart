@@ -38,6 +38,10 @@
         display: none;
     }
 
+    .alert-message-content #quantity-alert {
+        text-align: left !important;
+    }
+
     .form-product .select {
         display: block;
     }
