@@ -257,7 +257,8 @@ fieldset .input-measures input {
 }
 
 input::placeholder {
-color: var(--color-neutral-140);
+    color: var(--color-neutral-140);
+    text-transform: none;
 }
 
 .input-content .input-label {
@@ -551,6 +552,7 @@ textarea {
 .form-group span {
     font-weight: 400;
     font-size: 0.625rem;
+    /*border: solid 1px red;*/
 }
 
 .form-group-content {
@@ -600,12 +602,13 @@ textarea:hover {
     border-color: var(--color-neutral-50);
 }
 
-.error-message {
+.alert-message {
     color: red;
-    font-size: 12px;
+    font-size: 0.75rem !important;
+    font-style: italic;
     margin-top: 3px;
     display: none;
-  }
+}
 
 .product-description {
     margin: 40px 0px 20px 0px;
