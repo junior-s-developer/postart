@@ -160,21 +160,24 @@ function validarInput() {
 
     if (input_alt && !input_alt.value.trim()) {
      
-        alert('Informe o valor da altura.');
+        showAlert('input-alt-alert', 'informe as dimensões (altura e largura).');
+        hideAlert('input-alt', 'input-alt-alert');
         input_alt.focus();
         return false;
     }
 
     if (input_larg && !input_larg.value.trim()) {
       
-        alert('Informe o valor da largura.');
+        showAlert('input-larg-alert', 'informe as dimensões (altura e largura).');
+        hideAlert('input-larg', 'input-larg-alert');
         input_larg.focus();
         return false;
     }
 
     if (material && material.value === '') {
       
-        alert('Escolha o tipo de material.');
+        showAlert('material-alert', 'Escolha o tipo de material.');
+        hideAlert('material', 'material-alert');
         material.focus();
         return false;
     }
@@ -256,7 +259,8 @@ function validarInput() {
 
     if (quantity && (quantity.value === '0')) {
         
-        alert('A quantidade mínima de produto é 1.');
+        showAlert('quantity-alert', 'A quantidade mínima de produto é 1.');
+        hideAlert('quantity', 'quantity-alert');
         quantity.focus();
         return false;
     }

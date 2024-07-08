@@ -223,9 +223,12 @@ fieldset .input-measures input {
     display: none;
 }
 
+.product-content {
+    margin-bottom: 20px;
+}
+
 .input-content {
     display: flex;
-    margin-bottom: 20px;
     /*border: solid 1px rgb(0, 204, 255);*/
 }
 
@@ -272,9 +275,23 @@ input::placeholder {
     /*border: solid 1px rgb(0, 38, 255);*/
 }
 
+.product-content .alert-message-content {
+    display: flex;
+    /*border: solid 1px red;*/
+}
+
+.product-content .lbl-attributes {
+    height: 100%;
+    /*border: solid 1px red;*/
+}
+
+.product-content .alert-message {
+    width: 100%;
+    /*border: solid 1px red;*/
+}
+
 .select {
     display: flex;
-    margin-bottom: 20px;
     /*border: solid 1px red;*/
 }
 
