@@ -123,7 +123,9 @@ function hideAlert(input, alert) {
 
     input.addEventListener('blur', function() {
 
-        alert.style.display = 'none';
+        if(input.value.trim() != ''){
+            alert.style.display = 'none';
+        }
     });
 }
 
