@@ -165,7 +165,7 @@ fieldset {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     border-radius: 5px;
     font-size: 0.75rem;
@@ -200,6 +200,7 @@ fieldset .fieldset-text:nth-child(2) {
 
 fieldset .product-content {
     margin-bottom: 0px;
+    /*border: solid 1px red;*/
 }
 
 
