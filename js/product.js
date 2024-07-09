@@ -123,7 +123,7 @@ function hideAlert(input, alert) {
 
     input.addEventListener('blur', function() {
 
-        if(input.value.trim() != ''){
+        if(input.value.trim()) {
             alert.style.display = 'none';
         }
     });
@@ -159,6 +159,7 @@ function validarInput() {
     var state = document.getElementById('state');
     var cep = document.getElementById('cep');
     var cepPattern = /^[0-9]{5}-?[0-9]{3}$/;
+    var submit_form = document.querySelector(".submit-form");
 
     if (input_alt && !input_alt.value.trim()) {
      
@@ -374,8 +375,9 @@ function validarInput() {
         return false;
     }
 
-    alert('Formulário enviado com sucesso!');
-    return true;
+    if (confirm("Deseja enviar o formulário?")) {
+        submit_form.submit();
+    }
 }
 
 // progress bar
