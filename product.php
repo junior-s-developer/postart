@@ -39,14 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = $email_username;
-        $mail->Password = $email_password;
+        $mail->Username = 'contato.simaobrenoejunior@gmail.com';
+        $mail->Password = 'Contato78000xlr';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Destinatários
         $mail->setFrom($email_username, 'Website Contact Form');
-        $mail->addAddress('simaobrenoejunior@gmail.com');
+        $mail->addAddress('contato.simaobrenoejunior@gmail.com');
 
         // Conteúdo do e-mail
         $mail->isHTML(true);
