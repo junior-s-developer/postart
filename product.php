@@ -2,21 +2,35 @@
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
 require 'vendor/autoload.php';
 
+// Carregar variáveis de ambiente do arquivo .env
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Obter credenciais de e-mail das variáveis de ambiente
+$email_username = getenv('EMAIL_USERNAME');
+$email_password = getenv('EMAIL_PASSWORD');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST['name'];
-    $email = $_POST['email'];
-    $telefone = $_POST['phone'];
-    $logradouro = $_POST['public_place'];
-    $numero = $_POST['number'];
-    $complemento = $_POST['complement'];
-    $bairro = $_POST['neighborhood'];
-    $cidade = $_POST['city'];
-    $estado = $_POST['state'];
-    $cep = $_POST['cep'];
-    $observacao = $_POST['observation'];
+    $nome = htmlspecialchars($_POST['name']);
+    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+    $telefone = htmlspecialchars($_POST['phone']);
+    $logradouro = htmlspecialchars($_POST['public_place']);
+    $numero = htmlspecialchars($_POST['number']);
+    $complemento = htmlspecialchars($_POST['complement']);
+    $bairro = htmlspecialchars($_POST['neighborhood']);
+    $cidade = htmlspecialchars($_POST['city']);
+    $estado = htmlspecialchars($_POST['state']);
+    $cep = htmlspecialchars($_POST['cep']);
+    $observacao = htmlspecialchars($_POST['observation']);
+
+    if (!$email) {
+        echo "Email inválido.";
+        exit;
+    }
 
     $mail = new PHPMailer(true);
 
@@ -25,14 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'simaobrenoejunior@gmail.com'; // Substitua pelo seu endereço de e-mail do Gmail
-        $mail->Password = '#78000Xlr@'; // Substitua pela sua senha do Gmail
+        $mail->Username = $email_username;
+        $mail->Password = $email_password;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
         // Destinatários
-        $mail->setFrom($email, $nome);
-        $mail->addAddress('simaobrenoejunior@gmail.com'); // Adicione o endereço de e-mail de destino
+        $mail->setFrom($email_username, 'Website Contact Form');
+        $mail->addAddress('simaobrenoejunior@gmail.com');
 
         // Conteúdo do e-mail
         $mail->isHTML(true);
