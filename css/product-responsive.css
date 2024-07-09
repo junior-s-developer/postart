@@ -73,6 +73,14 @@
         display: none;
     }
 
+    .fieldset-content-vehicle .input-content {
+        margin: 0px;
+    }
+
+    .fieldset-content-vehicle .product-content {
+        margin-bottom: 10px;
+    }
+
     .form-group-content {
         display: block;
     }
@@ -155,6 +163,14 @@
 
     fieldset .input-content {
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .fieldset-content-vehicle .input-content {
+        margin: 0px;
+    }
+
+    .fieldset-content-vehicle .product-content {
         margin-bottom: 10px;
     }
 
