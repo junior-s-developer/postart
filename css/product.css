@@ -70,7 +70,7 @@
     align-items: center;
     border-radius: 16px;
     padding: 0px 12px;
-    border: solid 1px var(--color-neutral-80);
+    border: solid 1px light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
     width: 100%;
 }
 
