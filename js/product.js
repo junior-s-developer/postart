@@ -389,6 +389,22 @@ function validarInput() {
         var phoneNumber = '5535984368959';
         var url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
         window.open(url, '_blank');
+
+        /*var formData = new FormData();
+
+        formData.append('phoneNumber', phoneNumber);
+        formData.append('message', message);
+        formData.append('fileUrl', 'https://example.com/path/to/your/file'); // Substitua pela URL do arquivo real
+    
+        axios.post('http://localhost:3000/send-message', formData)
+    
+        .then(response => {
+            alert('Mensagem enviada com sucesso!');
+        })
+        .catch(error => {
+            console.error('Erro ao enviar mensagem:', error);
+            alert('Erro ao enviar mensagem.');
+        });*/
     }
 }
 

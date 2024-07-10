@@ -1,34 +1,24 @@
 const express = require('express');
-const multer = require('multer');
-const path = require('path');
+const bodyParser = require('body-parser');
+const axios = require('axios');
+
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Configure o diretório de armazenamento dos arquivos
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, 'uploads/'); // Diretório onde os arquivos serão armazenados
-    },
-    filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname)); // Nome do arquivo armazenado
-    }
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+app.post('/send-message', (req, res) => {
+    const { phoneNumber, message, fileUrl } = req.body;
+
+    // Aqui você pode processar a mensagem e enviar para onde precisar
+    console.log(`Enviando mensagem para ${phoneNumber}: ${message}`);
+    console.log(`Arquivo: ${fileUrl}`);
+
+    // Responder ao cliente
+    res.send('Mensagem enviada com sucesso!');
 });
 
-const upload = multer({ storage: storage });
-
-// Servir arquivos estáticos na pasta uploads
-app.use('/uploads', express.static('uploads'));
-
-// Endpoint para upload de arquivos
-app.post('/upload', upload.single('file'), (req, res) => {
-    if (!req.file) {
-        return res.status(400).send('Nenhum arquivo foi enviado.');
-    }
-    const fileUrl = `http://localhost:3000/uploads/${req.file.filename}`;
-    res.json({ fileUrl: fileUrl });
-});
-
-// Inicie o servidor
-const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
