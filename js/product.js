@@ -147,6 +147,7 @@ function validarInput() {
     var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
     var quantity = document.getElementById('quantity');
+    var fileInput = document.getElementById('fileInput');
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -154,12 +155,13 @@ function validarInput() {
     var phonePattern = /^\(\d{2}\) \d{4}-\d{4}$/;
     var public_place = document.getElementById('public_place');
     var number = document.getElementById('number');
+    var complement = document.getElementById('complement');
     var neighborhood = document.getElementById('neighborhood');
     var city = document.getElementById('city');
     var state = document.getElementById('state');
     var cep = document.getElementById('cep');
     var cepPattern = /^[0-9]{5}-?[0-9]{3}$/;
-    var submit_form = document.querySelector(".submit-form");
+    var observation = document.getElementById('observation');
 
     if (input_alt && !input_alt.value.trim()) {
      
@@ -376,7 +378,17 @@ function validarInput() {
     }
 
     if (confirm("Deseja enviar o formulário?")) {
-        submit_form.submit();
+        
+        var complementValue;
+        var observationValue;
+    
+        complementValue = !complement.value ? 'Não informado.' : complement.value;
+        observationValue = !observation.value ? 'Nenhuma observação.' : observation.value;
+    
+        var message = `Olá!\n\nSolicitei um orçamento através do site www.postart.net.br para o seguinte produto:\n\n*Banner*\n\nTamanho: ${input_alt.value} x ${input_larg.value} cm\nMaterial: ${material.options[material.selectedIndex].text}\nQuantidade: ${quantity.value}\n\n*Contato*\n\nNome: ${name.value}\nEmail: ${email.value}\nTelefone: ${phone.value}\n\n*Endereço*\n\nLogradouro: ${public_place.value}\nNúmero: ${number.value}\nComplemento: ${complementValue}\nBairro: ${neighborhood.value}\nCidade: ${city.value}\nEstado: ${state.value}\nCEP: ${cep.value}\n\n*Observação*\n\n${observationValue}\n\n\n_Aguardo seu retorno._\n\n_Obrigado,_\n_${name.value}_`;      
+        var phoneNumber = '5535984368959';
+        var url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
     }
 }
 
