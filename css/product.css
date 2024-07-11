@@ -128,7 +128,8 @@
 
 #content-product {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 40px;
     margin-bottom: 40px;
     /*border: solid 1px var(--color-neutral-50);*/
 }
