@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Faixa</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Faixa</h1>
+            <div class="description-product">Destaque sua mensagem com Faixas Publicitárias criativas. Personalize e conquiste a atenção do seu público!</div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/banner-horizontal.jpg" alt="Banner">
+            </div>
+
+            <form class="form-product">
+
+                <div class="product">
+
+                    <div class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Tamanho</label>
+                            
+                            <div class="input-measures">
+                                <input type="tel" id="input-alt" maxlength="4" placeholder="Altura" />
+                                <label for="input" class="input-label">x</label>
+                                <input type="tel" id="input-larg" maxlength="4" placeholder="Largura" />
+                                <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-alt-alert"></span>  
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-larg-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Material</label>
+    
+                            <select id="material" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Lona Brilho 440g</option>
+                                <option value="2">Lona Fosca 280g</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="material-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="quantity" class="lbl-attributes">Quantidade</label>
+    
+                            <div class="quantity-container">
+                                <button type="button" onclick="adjust_quantity(-1)">-</button>
+                                <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                                <button type="button" onclick="adjust_quantity(1)">+</button>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="quantity-alert" style="text-align: end;"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD, com uma resolução mínima de 300 dpi e tamanho real do adesivo. Caso não tenha o seu design, não se preocupe, a PostArt cria tudo pra você!</p>
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Contato</legend>
+
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name">
+                    <span class="alert-message" id="name-alert">Digite seu nome.</span>
+                </div>
+    
+                <div class="form-group-content">
+    
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" style="text-transform: lowercase ;">
+                        <span class="alert-message" id="email-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-phone">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                        <span class="alert-message" id="phone-alert"></span>
+                    </div>
+    
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Endereço</legend>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-public_place">
+                        <label for="public_place">Logradouro</label>
+                        <input type="text" id="public_place" name="public_place" placeholder="Ex: rua, avenida, travessa, praça, etc.">
+                        <span class="alert-message" id="public_place-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-number">
+                        <label for="number">Número</label>
+                        <input type="tel" id="number" name="number">
+                        <span class="alert-message" id="number-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-complement">
+                        <label for="complement">Complemento <span>(Opcional)</span></label>
+                        <input type="text" id="complement" name="complement" placeholder="Ex: casa, apartamento, sala, etc.">
+                    </div>
+    
+                    <div class="form-group" id="group-neighborhood">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" name="neighborhood">
+                        <span class="alert-message" id="neighborhood-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-city">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                        <span class="alert-message" id="city-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-state">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state">
+                        <span class="alert-message" id="state-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-cep">
+                        <label for="cep">CEP</label>
+                        <input type="tel" id="cep" name="cep">
+                        <span class="alert-message" id="cep-alert"></span>
+                    </div>
+
+                </div>
+                
+            </fieldset>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea id="observation" name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>   
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Banner</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+                
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>O banner contém bastão e cordinha para pendurá-lo em um local desejável.</p>        
+                   
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>A PostArt conta com diversos tamanhos de banner. Você também pode escolher o tamanho de sua preferência informando (Altura x Largura).
+                        <p><span>Ex: 1000 x 2000 mm</span></p>
+                               
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Material</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>Os nossos produtos são feitos no material que melhor se adequa à sua função, oferecemos dois materiais diferentes:</p>                    
+                        <p><strong>Lona Brilho 440g<br>Lona Fosca 280g</strong></p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Impressão</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                        <p>Cores, só frente - Impresso apenas do lado exposto, ficando o verso do Banner vazio, este será fixado em alguma superfície desejada.</p><br>
+                        <p><strong>Tecnologia de Impressão: </strong>A Impressão Digital é o método utilizado para a impressão do seu Banner. Este método consiste num processo mais simples de impressão direto, em que a tinta é aplicada imediatamente no papel, o que beneficia também a rapidez do processo. Para além de permitir obter um produto impresso de elevada qualidade, esta tecnologia de impressão possibilita a compra de pequenas quantidades a um preço acessível.</p><br>
+                        <p><strong>Resolução para Banner: </strong>Durante o processo de impressão seu Banner pode sofrer alterações na resolução, por isso deve selecionar imagens que sejam proporcionais ao tamanho do seu Banner.</p>
+                        <p>A resolução, medida em Densidade por Pixel (DPI), diz respeito ao número de pixéis de uma imagem- quanto mais pixéis uma imagem tem, maior é a sua resolução. No caso da resolução para Banner, deve ter em atenção qual a distância a que este material será visto por seus clientes: para curtas distâncias deve eleger maior resolução e menor tamanho de impressão, para maiores distâncias escolha menor resolução e tamanho maior.</p><br>
+                        <p>Através da Impressão Digital é possível imprimir um Banner em resoluções de maior qualidade, sendo que a resolução para Banner mínima aconselhada é 300 dpi.</p>
+            
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div style="margin-bottom: 0px;" class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p>O preço do produto personalizado varia em função da quantidade encomendada.</p>   
+                    
+                    </div> 
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
