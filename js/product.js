@@ -69,20 +69,25 @@ function showDivInstalation() {
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
     var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
-    var area_goal_content = document.querySelector('.area-goal-content');
+    var area_objective_content = document.querySelector('.area-objective-content');
 
+    if(purpose_use.value === '0') {
+        
+        others_content.style.display = 'block';
+        input_others.focus();
+
+    } else {
+        others_content.style.display = 'none';
+    }
+    
     if(purpose_use.value === '1') {
 
         fieldset_content_vehicle.style.display = 'flex';
-        others_content.style.display = 'none';
-        area_goal_content.style.display = 'block';
+        area_objective_content.style.display = 'block';
 
-    } else if(purpose_use.value === '2') {
-        
-        others_content.style.display = 'block';
+    } else {
         fieldset_content_vehicle.style.display = 'none';
-        area_goal_content.style.display = 'none';
-        input_others.focus();
+        area_objective_content.style.display = 'none';
     }
 }
 
@@ -141,13 +146,13 @@ function validarInput() {
     var year = document.getElementById('year');
     var color = document.getElementById('color');
     var area = document.getElementById('area');
-    var goal = document.getElementById('goal');
+    var vehicle_objective = document.getElementById('vehicle-objective');
+    var banner_objective = document.getElementById('banner-objective');
     var purpose_use = document.getElementById('purpose-use');
     var application = document.getElementById('application');
     var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
     var quantity = document.getElementById('quantity');
-    var fileInput = document.getElementById('fileInput');
     var name = document.getElementById('name');
     var email = document.getElementById('email');
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -245,11 +250,11 @@ function validarInput() {
             return false;
         }
 
-        if (goal && goal.value === '') {
+        if (vehicle_objective && vehicle_objective.value === '') {
             
-            showAlert('goal-alert', 'Selecione o objetivo da adesivação do veículo.');
-            hideAlert('goal', 'goal-alert');
-            goal.focus();
+            showAlert('vehicle-objective-alert', 'Selecione o objetivo da adesivação do veículo.');
+            hideAlert('vehicle-objective', 'vehicle-objective-alert');
+            vehicle_objective.focus();
             return false;
         }
     }
@@ -263,6 +268,14 @@ function validarInput() {
             input_others.focus();
             return false;
         }
+    }
+
+    if (banner_objective && banner_objective.value === '') {
+            
+        showAlert('banner_objective-alert', 'Selecione o objetivo da faixa.');
+        hideAlert('banner_objective', 'banner_objective-alert');
+        vehicle_objective.focus();
+        return false;
     }
 
     if (application && application.value === '') {

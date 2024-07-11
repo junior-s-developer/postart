@@ -106,9 +106,62 @@
 
                         <div class="select">
 
+                            <label for="select" class="lbl-attributes">Finalidade de uso</label>
+    
+                            <select id="purpose-use" class="options" onchange="showDivInstalation()">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="0">Outros</option>
+                                <option value="1">Fachadas de Lojas e Estabelecimentos</option>
+                                <option value="2">Interiores de Lojas e Centros Comerciais</option>
+                                <option value="3">Eventos ao Ar Livre</option>
+                                <option value="4">Feiras e Exposições</option>
+                                <option value="5">Espaços Públicos e Praças</option>
+                                <option value="6">Fachadas de Prédios e Edifícios</option>
+                                <option value="7">Pontes e Viadutos</option>
+                                <option value="8">Estacionamentos e Garagens</option>
+                                <option value="9">Espaços Educacionais</option>
+                                <option value="10">Aeroportos e Estações de Transporte</option>
+                                <option value="11">Eventos Privados</option>
+                                <option value="12">Espaços Esportivos</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="purpose-use-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div id="others-content" class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes"></label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: loja, residência, vitrine, etc."/>                        
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-others-alert"></span>  
+                        </div>
+    
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
                             <label for="select" class="lbl-attributes">Objetivo</label>
     
-                            <select id="goal" class="options">
+                            <select id="banner-objective" class="options">
     
                                 <option value="" hidden>- Selecione uma opção -</option>
                                 <option value="1">Publicidade Comercial</option>
@@ -136,7 +189,30 @@
 
                         <div class="alert-message-content">
                             <label for="input" class="lbl-attributes"></label>
-                            <span class="alert-message" id="goal-alert"></span>  
+                            <span class="alert-message" id="banner_objective-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Aplicação</label>
+    
+                            <select id="application" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Pelo Cliente</option>
+                                <option value="2">Pela Empresa</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="application-alert"></span>  
                         </div>
 
                     </div>
@@ -323,14 +399,14 @@
                         <p><strong>1. Durabilidade</strong></p>
                         <ul>
                             <li><strong>Uso externo: </strong>3 a 5 anos, dependendo das condições climáticas e exposição solar.</li>
-                            <li><strong>Uso interno: </strong>Durabilidade superior a 5 anos.</li>
+                            <li><strong>Uso interno: </strong>durabilidade superior a 5 anos.</li>
                         </ul>
                         <p><strong>2. Resistência</strong></p>
                         <ul>
                             <li>Alta resistência a rasgos e perfurações.</li>
                             <li>Resistente à água e a intempéries (chuva, vento, sol).</li>
                             <li>Tratamento anti-UV para proteção contra raios ultravioleta.</li>
-                            <li><strong>Peso: </strong>Variável conforme a dimensão e espessura do material.</li>
+                            <li><strong>Peso: </strong>variável conforme a dimensão e espessura do material.</li>
                         </ul>
                     </div>
 
@@ -387,7 +463,7 @@
 
                 <button class="toggle">
 
-                    <h4>Impressão</h4>
+                    <h4>Finalidade De Uso</h4>
                     <i class="fa-solid fa-chevron-down"></i>      
                     <i class="fa-solid fa-chevron-up"></i>  
 
@@ -397,8 +473,57 @@
 
                     <div class="description">
 
-                        <p>Impressão digital de alta resolução (720 dpi a 1440 dpi), garantindo cores vibrantes e detalhes nítidos. Uso de tintas UV resistentes ao desbotamento.</p>         
-                    
+                    <p><strong>Fachadas de Lojas e Estabelecimentos: </strong>nas fachadas de lojas para atrair clientes e anunciar promoções, e em vitrines para destacar produtos em oferta.</p>
+                    <p><strong>Interiores de Lojas e Centros Comerciais: </strong>em corredores de shoppings para direcionar clientes para lojas específicas, e dentro de lojas para destacar seções ou áreas de promoção.</p>
+                    <p><strong>Eventos ao Ar Livre: </strong>em palcos de shows e festivais, e nas entradas de eventos esportivos, culturais ou comunitários.</p>
+                    <p><strong>Feiras e Exposições: </strong>em estandes para promover empresas e produtos, e na entrada do local do evento para identificação.</p>
+                    <p><strong>Espaços Públicos e Praças: </strong>em praças públicas para divulgação de eventos comunitários ou campanhas, e em parques para anunciar eventos ou atividades.</p>
+                    <p><strong>Fachadas de Prédios e Edifícios: </strong>em grandes edifícios para anúncios de larga escala, e em áreas de construção para informar sobre o projeto ou empresa responsável.</p>
+                    <p><strong>Pontes e Viadutos: </strong>em pontes para máxima visibilidade de campanhas publicitárias, e em viadutos para alcance de motoristas e pedestres.</p>
+                    <p><strong>Estacionamentos e Garagens: </strong>em estacionamentos e garagens para promover serviços ou eventos próximos, além de orientar ou anunciar nas entradas e saídas.</p>
+                    <p><strong>Espaços Educacionais: </strong>nas entradas de escolas e universidades para eventos acadêmicos e dentro de campi para direcionar alunos e visitantes.</p>
+                    <p><strong>Aeroportos e Estações de Transporte: </strong>em terminais de aeroportos para anúncios de empresas e produtos e em estações de metrô e rodoviárias para informações e campanhas publicitárias.</p>
+                    <p><strong>Eventos Privados: </strong>em salões de festas para comemorações como casamentos, aniversários e formaturas e em espaços alugados para conferências, palestras e workshops.</p>
+                    <p><strong>Espaços Esportivos: </strong>em estádios e ginásios para patrocínios e informações de eventos e em quadras esportivas para promover torneios e competições.</p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Objetivo</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                    <p><strong>1. Publicidade Comercial: </strong>usado para promover produtos, serviços ou promoções, como em lojas, restaurantes e eventos comerciais.</p>
+                    <p><strong>2. Anúncios de Eventos: </strong>usado para anunciar eventos como shows, festas, conferências, entre outros, como festas, concertos e feiras.</p>
+                    <p><strong>3. Informações Educativas: </strong>usado para fornecer informações educativas em escolas, universidades ou palestras, como workshops, seminários e cursos.</p>
+                    <p><strong>4. Comunicação Corporativa: </strong>usado dentro de empresas para comunicação interna, como anúncios de reuniões, informações de segurança e novidades internas.</p>
+                    <p><strong>5. Eventos Comunitários: </strong>usado para divulgar eventos e atividades em comunidades locais, como festas de bairro, encontros comunitários e feiras livres.</p>
+                    <p><strong>6. Sinalização e Direção: </strong>usado para orientar e informar sobre direções em eventos ou locais públicos, como indicações de locais, direção para estandes em feiras e sinalização em grandes eventos.</p>
+                    <p><strong>7. Formaturas: </strong>usado para celebrar e informar sobre cerimônias de formatura, como faixas de parabéns para os formandos, informações sobre a cerimônia, como horário e local, direções para orientar os convidados até os locais corretos, decoração do ambiente da cerimônia e festas, e mensagens motivacionais para inspirar e motivar os formandos.</p>
+                    <p><strong>8. Casamentos: </strong>usado para celebrar e fornecer informações sobre casamentos, como recepção dos convidados para dar as boas-vindas, informações sobre a cerimônia para fornecer detalhes sobre o evento, direções para orientar os convidados até os locais corretos e decoração para enfeitar o local do casamento.</p>
+                    <p><strong>9. Aniversários: </strong>usado para celebrar aniversários, como faixas de parabéns para felicitar o aniversariante, informações sobre a festa para fornecer detalhes sobre a celebração e decoração para enfeitar o local da festa.</p>
+                    <p><strong>10. Campanhas de Conscientização: </strong>usado para promover campanhas de conscientização sobre diversos temas, como saúde pública para campanhas de vacinação e prevenção de doenças, meio ambiente para campanhas de preservação ambiental e reciclagem, e segurança para campanhas de segurança no trânsito e no trabalho.</p>
+                    <p><strong>11. Lançamentos de Produtos: </strong>essas ferramentas são utilizadas para promover o lançamento de novos produtos, destacando-os de forma eficaz. Elas servem tanto para chamar a atenção para os novos lançamentos quanto para anunciar promoções especiais relacionadas a esses produtos.</p>
+                    <p><strong>12. Promoções Especiais: </strong>usadas para anunciar promoções e descontos específicos. Elas incluem exemplos como descontos, que são utilizados para divulgar reduções de preços específicas, e ofertas limitadas, que servem para promover ofertas disponíveis por tempo limitado.</p>
+                    <p><strong>13. Eventos Esportivos: </strong>são utilizados para promover ou fornecer informações sobre competições esportivas. Eles incluem anúncios de jogos ou torneios, mensagens de parabéns aos vencedores para felicitar equipes ou atletas, e direções para espectadores, que orientam o público durante os eventos.</p>
+                    <p><strong>14. Conferências e Congressos: </strong>são utilizados para promover ou fornecer informações sobre esses eventos. Eles incluem exemplos como Informações do Evento, que fornecem detalhes sobre horários e locais; Bem-Vindos, que recepcionam os participantes; e Sinalização Interna, que orienta os participantes dentro do evento.</p>
+                    <p><strong>15. Feiras e Exposições: </strong>são utilizadas para promover ou fornecer informações sobre esses eventos. Elas incluem exemplos como Expositores, que destacam empresas ou produtos em exposição; Informações do Evento, que fornecem detalhes sobre a feira; e Sinalização e Direção, que orientam os visitantes dentro do local.</p>
+                    <p><strong>16. Feiras de Emprego: </strong>são usadas para promover esses eventos e orientar os participantes. Exemplos incluem Bem-Vindos, para recepcionar os candidatos; Informações do Evento, que fornecem detalhes sobre horários e locais; e Sinalização e Direção, para guiar os participantes dentro do evento.</p>
+                    <p><strong>17. Campanhas Políticas: </strong>são usadas para promover campanhas eleitorais e informar os eleitores. Exemplos incluem Candidatos, que promovem candidatos específicos; Eventos de Campanha, que anunciam comícios ou debates; e Mensagens de Apoio, que divulgam mensagens de apoio e slogans.</p>
+                    <p><strong>18. Eventos Religiosos: </strong>são usados para promover eventos e celebrações religiosas. Exemplos incluem Celebrações, que anunciam missas, cultos ou festividades, e Informações do Evento, que fornecem detalhes sobre a celebração.</p>
                     </div>
 
                 </div>
