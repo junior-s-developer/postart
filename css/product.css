@@ -310,7 +310,7 @@ input::placeholder {
 }
 
 .select option {
-    text-transform: capitalize;
+    text-transform: normal;
     font-size: 0.75rem;
 }
 
