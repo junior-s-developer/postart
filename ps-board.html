@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Faixa</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Placa PS</h1>
+            <div class="description-product">Personalize sua Placa PS para qualquer ocasião e transforme suas ideias em realidade com qualidade, durabilidade e versatilidade ao seu alcance!</div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img//ps-board.jpeg" alt="Banner">
+            </div>
+
+            <form class="form-product">
+
+                <div class="product">
+
+                    <div class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Tamanho</label>
+                            
+                            <div class="input-measures">
+                                <input type="tel" id="input-alt" maxlength="4" placeholder="Altura" />
+                                <label for="input" class="input-label">x</label>
+                                <input type="tel" id="input-larg" maxlength="4" placeholder="Largura" />
+                                <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-alt-alert"></span>  
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-larg-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Material</label>
+    
+                            <select id="material" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Lona Brilho 440g</option>
+                                <option value="2">Lona Fosca 280g</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="material-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Finalidade de uso</label>
+    
+                            <select id="purpose-use" class="options" onchange="showDivInstalation()">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Publicidade e Sinalização</option>
+                                <option value="2">Embalagens</option>
+                                <option value="3">Decoração e Construção</option>
+                                <option value="4">Artesanato e Hobbies</option>
+                                <option value="5">Indústria</option>
+                                <option value="6">Educação e Treinamento</option>
+                                <option value="7">Eventos e Festas</option>
+                                <option value="8">Aplicações Diversas</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="purpose-use-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div id="others-content" class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes"></label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: loja, residência, vitrine, etc."/>                        
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-others-alert"></span>  
+                        </div>
+    
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Aplicação</label>
+    
+                            <select id="application" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Pelo Cliente</option>
+                                <option value="2">Pela Empresa</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="application-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="quantity" class="lbl-attributes">Quantidade</label>
+    
+                            <div class="quantity-container">
+                                <button type="button" onclick="adjust_quantity(-1)">-</button>
+                                <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                                <button type="button" onclick="adjust_quantity(1)">+</button>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="quantity-alert" style="text-align: end;"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD, com uma resolução mínima de 300 dpi e tamanho real do adesivo. Caso não tenha o seu design, não se preocupe, a PostArt cria tudo pra você!</p>
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Contato</legend>
+
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name">
+                    <span class="alert-message" id="name-alert">Digite seu nome.</span>
+                </div>
+    
+                <div class="form-group-content">
+    
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" style="text-transform: lowercase ;">
+                        <span class="alert-message" id="email-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-phone">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                        <span class="alert-message" id="phone-alert"></span>
+                    </div>
+    
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Endereço</legend>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-public_place">
+                        <label for="public_place">Logradouro</label>
+                        <input type="text" id="public_place" name="public_place" placeholder="Ex: rua, avenida, travessa, praça, etc.">
+                        <span class="alert-message" id="public_place-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-number">
+                        <label for="number">Número</label>
+                        <input type="tel" id="number" name="number">
+                        <span class="alert-message" id="number-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-complement">
+                        <label for="complement">Complemento <span>(Opcional)</span></label>
+                        <input type="text" id="complement" name="complement" placeholder="Ex: casa, apartamento, sala, etc.">
+                    </div>
+    
+                    <div class="form-group" id="group-neighborhood">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" name="neighborhood">
+                        <span class="alert-message" id="neighborhood-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-city">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                        <span class="alert-message" id="city-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-state">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state">
+                        <span class="alert-message" id="state-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-cep">
+                        <label for="cep">CEP</label>
+                        <input type="tel" id="cep" name="cep">
+                        <span class="alert-message" id="cep-alert"></span>
+                    </div>
+
+                </div>
+                
+            </fieldset>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea id="observation" name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>   
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Placa PS</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+                
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque incidunt voluptate aliquid, sapiente libero deserunt provident eos porro aspernatur ad repellat, aut voluptatem accusamus. Cupiditate, recusandae. Quis inventore pariatur saepe.</p>
+
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>Personalize o tamanho ideal para seu projeto. Insira a altura e largura desejadas em centímetros que se encaixa perfeitamente nas suas necessidades.</p>
+                               
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Material</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugiat quod maiores, nostrum pariatur laboriosam, eos blanditiis atque, consectetur omnis quo odit a! Neque consequatur dolores provident dolore ab eius?</p>
+                   
+                </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Finalidade De Uso</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                    <p><strong>1. Publicidade e Sinalização</strong></p>
+                    <ul>
+                        <li><strong>Letreiros e Placas Publicitárias: </strong>criação de sinalizações atraentes e duradouras para lojas, escritórios e outros estabelecimentos comerciais.</li>
+                        <li><strong>Displays Promocionais: </strong>utilizados em pontos de venda para destacar produtos ou promoções.</li>
+                        <li><strong>Painéis Informativos: </strong>em feiras, exposições e eventos para fornecer informações aos visitantes.</li>
+                        <li><strong>Placas de Sinalização Interna: </strong>para escritórios, hospitais, escolas e outros locais que necessitam de orientação clara.</li>
+                        <li><strong>Sinalização Externa: </strong>placas de trânsito, sinalização de segurança e informativa em espaços públicos.</li>
+                    </ul>
+                    <p><strong>2. Embalagens</strong></p>
+                    <ul>
+                        <li><strong>Embalagens de Alimentos: </strong>bandejas, caixas e recipientes para armazenar alimentos, aproveitando a segurança alimentar do PS.</li>
+                        <li><strong>Proteção de Produtos: </strong>embalagens para eletrônicos, brinquedos e outros itens delicados, fornecendo proteção durante o transporte.</li>
+                        <li><strong>Blisters e Clamshells: </strong>embalagens transparentes para exibir produtos em prateleiras de lojas.</li>
+                    </ul>
+                    <p><strong>3. Decoração e Construção</strong></p>
+                    <ul>
+                        <li><strong>Painéis Decorativos: </strong>revestimento de paredes e tetos, oferecendo uma aparência limpa e moderna.</li>
+                        <li><strong>Elementos Arquitetônicos: </strong>molduras, rodapés, sancas e outros detalhes decorativos em interiores.</li>
+                        <li><strong>Divisórias: </strong>usadas para criar espaços em escritórios, lojas e residências.</li>
+                        <li><strong>Tetos Falsos: </strong>painéis de PS para instalação de tetos falsos em projetos de construção.</li>
+                    </ul>
+                    <p><strong>4. Artesanato e Hobbies</strong></p>
+                    <ul>
+                        <li><strong>Modelagem e Protótipos: </strong>criação de maquetes, modelos e protótipos detalhados para arquitetura, design e engenharia.</li>
+                        <li><strong>Projetos DIY (Faça Você Mesmo): </strong>ideal para projetos de artesanato e bricolagem devido à sua facilidade de corte e manipulação.</li>
+                        <li><strong>Decorações Personalizadas: </strong>criação de peças decorativas únicas para festas, eventos e decoração de interiores.</li>
+                    </ul>
+                    <p><strong>5. Indústria</strong></p>
+                    <ul>
+                        <li><strong>Equipamentos Industriais: </strong>componentes leves e duráveis utilizados em máquinas e equipamentos.</li>
+                        <li><strong>Peças Técnicas: </strong>fabricação de peças específicas para diferentes aplicações industriais.</li>
+                        <li><strong>Proteção de Máquinas: </strong>placas de PS usadas para cobrir e proteger partes sensíveis de máquinas.</li>
+                    </ul>
+                    <p><strong>6. Educação e Treinamento</strong></p>
+                    <ul>
+                        <li><strong>Material Didático: </strong>criação de mapas, figuras tridimensionais e outros materiais educativos.</li>
+                        <li><strong>Simulações: </strong>utilização em treinamento prático em áreas como medicina, engenharia e outras disciplinas técnicas.</li>
+                    </ul>
+                    <p><strong>6. Eventos e Festas</strong></p>
+                    <ul>
+                        <li><strong>Decorações Temáticas: </strong>elementos decorativos personalizados para festas, casamentos e outros eventos.</li>
+                        <li><strong>Suportes e Stands: </strong>estruturas para exposições, apresentações e eventos sociais.</li>
+                        <li><strong>Cenografia: </strong>criação de cenários para teatro, televisão e cinema.</li>
+                    </ul>
+                    <p><strong>7. Aplicações Diversas</strong></p>
+                    <ul>
+                        <li><strong>Brinquedos: </strong>produção de brinquedos seguros e duráveis.</li>
+                        <li><strong>Itens Domésticos: </strong>utensílios domésticos como bandejas, organizadores e suportes.</li>
+                        <li><strong>Produtos de Jardinagem: </strong>vasos, bandejas de sementes e outros acessórios de jardinagem.</li>
+                        <li><strong>Material Esportivo: </strong>equipamentos e acessórios leves e resistentes para esportes.</li>
+                        <li><strong>Utensílios Médicos: </strong>ferramentas e dispositivos médicos descartáveis.</li>
+                    </ul>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Aplicação</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laudantium, alias eos dolores a delectus ipsum quisquam vitae doloremque ex quo temporibus dolorum nostrum, optio officiis nemo architecto! Porro, molestias?</p>                    <p><span class="attention-title">Atenção: </span><span class="attention-text">ao aplicar a lona backdrop, é essencial seguir as instruções de montagem e instalação corretamente. Caso o cliente opte por realizar a aplicação por conta própria, a empresa não se responsabiliza por danos, falhas na instalação ou qualquer problema decorrente do mau uso do material. É altamente recomendável que a instalação seja realizada por profissionais qualificados para garantir a integridade e a eficácia do produto.</span></p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div style="margin-bottom: 0px;" class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p><strong>Pedidos Personalizados: </strong>escolha a quantidade que melhor atende às suas necessidades, seja para pequenos projetos ou grandes campanhas publicitárias.</p>
+                        <p><strong>Descontos Progressivos: </strong>aproveite nossos preços competitivos com descontos especiais para compras em grande escala.</p>  
+                        <p><strong>Gestão de Estoque: </strong>estoque sempre atualizado para atender pedidos de qualquer tamanho com rapidez e eficiência.</p>                                                                    
+                    
+                    </div> 
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
