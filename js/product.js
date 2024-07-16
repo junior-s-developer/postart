@@ -139,6 +139,7 @@ function validarInput() {
     var input_alt = document.getElementById('input-alt');
     var input_larg = document.getElementById('input-larg');
     var material = document.getElementById('material');
+    var thickness = document.getElementById('thickness');
     var finishing = document.getElementById('finishing');
     var fieldset_content_vehicle = document.querySelector('.fieldset-content-vehicle');
     var brand = document.getElementById('brand');
@@ -189,6 +190,14 @@ function validarInput() {
         showAlert('material-alert', 'Escolha o tipo de material.');
         hideAlert('material', 'material-alert');
         material.focus();
+        return false;
+    }
+
+    if (thickness && thickness.value === '') {
+      
+        showAlert('thickness-alert', 'Selecione a espessura do produto.');
+        hideAlert('thickness', 'thickness-alert');
+        thickness.focus();
         return false;
     }
 
