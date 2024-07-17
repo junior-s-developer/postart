@@ -38,7 +38,7 @@
         <div class="title-description">
 
             <h1>Placa Luminosa</h1>
-            <div class="description-product">Faça sua marca brilhar! Placas luminosas personalizadas que iluminam seu negócio com estilo e elegância, dia e noite!</div>
+            <div class="description-product">Faça sua marca brilhar! Placas luminosas personalizadas que iluminam seu negócio com estilo e elegância!</div>
 
         </div>
 
@@ -61,11 +61,31 @@
                             <select id="material" class="options">
     
                                 <option value="" hidden>- Selecione uma opção -</option>
-                                <option value="1">LED</option>
-                                <option value="2">Neon</option>
-                                <option value="3">Caixas de Luz</option>
-                                <option value="4">Retroiluminada</option>
-                                <option value="5">Totem Luminoso</option>
+                                <option value="1">Luminosa Retangular</option>
+                                <option value="2">Luminosa Redondo</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="material-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Material</label>
+    
+                            <select id="material" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Lona</option>
+                                <option value="2">ACM</option>
     
                             </select>
     
@@ -105,59 +125,42 @@
 
                     </div>
 
-                    <div class="product-content">
+                    <div id="input-goal" class="product-content">
 
-                        <div class="select">
+                        <div class="input-content">
 
-                            <label for="select" class="lbl-attributes">Material</label>
-    
-                            <select id="material" class="options">
-    
-                                <option value="" hidden>- Selecione uma opção -</option>
-                                <option value="1">Acrílico</option>
-                                <option value="2">Metal</option>
-                                <option value="3">Vidro</option>
-                                <option value="4">PVC</option>
-                                <option value="5">Vidro</option>
-    
-                            </select>
+                            <label for="input" class="lbl-attributes">Finalidade de uso</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: Loja, Restaurante/Bar, Pizzaria, etc."/>                        
+                            </div>
     
                         </div>
 
                         <div class="alert-message-content">
                             <label for="input" class="lbl-attributes"></label>
-                            <span class="alert-message" id="material-alert"></span>  
+                            <span class="alert-message" id="input-others-alert"></span>  
                         </div>
-
+    
                     </div>
 
-                    <div class="product-content">
+                    <div id="input-objective" class="product-content">
 
-                        <div class="select">
+                        <div class="input-content">
 
-                            <label for="select" class="lbl-attributes">Finalidade de uso</label>
-    
-                            <select id="purpose-use" class="options" onchange="showDivInstalation()">
-    
-                                <option value="" hidden>- Selecione uma opção -</option>
-                                <option value="1">Publicidade e Sinalização</option>
-                                <option value="2">Embalagens</option>
-                                <option value="3">Decoração e Construção</option>
-                                <option value="4">Artesanato e Hobbies</option>
-                                <option value="5">Indústria</option>
-                                <option value="6">Educação e Treinamento</option>
-                                <option value="7">Eventos e Festas</option>
-                                <option value="8">Aplicações Diversas</option>
-    
-                            </select>
+                            <label for="input" class="lbl-attributes">Objetivo</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: Fachada, Vitrine, Interior, Placa Direcional etc."/>                        
+                            </div>
     
                         </div>
 
                         <div class="alert-message-content">
                             <label for="input" class="lbl-attributes"></label>
-                            <span class="alert-message" id="purpose-use-alert"></span>  
+                            <span class="alert-message" id="input-others-alert"></span>  
                         </div>
-
+    
                     </div>
 
                     <div id="others-content" class="product-content">
