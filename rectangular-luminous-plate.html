@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comunicação Visual | Fazemos sua fachada">
+    <meta name="keywords" content="PostArt">
+    <meta name="author" content="Júnior Silva">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/product-responsive.css">
+    <title>Placa Luminosa Retangular</title>
+</head>
+
+<body>
+    <header id="header-product">
+
+        <nav class="nav-bar">
+
+            <a class="home" href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <p>Home</p>
+            </a>
+
+            <div class="search">
+                <input placeholder="Pesquisar um produto" />
+                <img src="img/lupa.png" alt="Pesquisar">
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main id="main-product">
+
+        <div class="title-description">
+
+            <h1>Placa Luminosa Retangular</h1>
+            <div class="description-product">Faça sua marca brilhar! Placas luminosas personalizadas que iluminam seu negócio com estilo e elegância!</div>
+
+        </div>
+
+        <div id="content-product">
+
+            <div class="image-product">
+                <img src="img/rectangular-luminous-banner.png" alt="Banner">
+            </div>
+
+            <form class="form-product">
+
+                <div class="product">
+
+                    <div class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Tamanho</label>
+                            
+                            <div class="input-measures">
+                                <input type="tel" id="input-alt" maxlength="4" placeholder="Altura" />
+                                <label for="input" class="input-label">x</label>
+                                <input type="tel" id="input-larg" maxlength="4" placeholder="Largura" />
+                                <label for="input" class="input-label" style="justify-content: right;">cm</label>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-alt-alert"></span>  
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-larg-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="select" class="lbl-attributes">Material</label>
+    
+                            <select id="material" class="options">
+    
+                                <option value="" hidden>- Selecione uma opção -</option>
+                                <option value="1">Lona</option>
+                                <option value="2">ACM</option>
+    
+                            </select>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="material-alert"></span>  
+                        </div>
+
+                    </div>
+
+                    <div id="input-goal" class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Finalidade de uso</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: Loja, Restaurante/Bar, Pizzaria, etc."/>                        
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-others-alert"></span>  
+                        </div>
+    
+                    </div>
+
+                    <div id="input-objective" class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes">Objetivo</label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: Fachada, Vitrine, Interior, Placa Direcional etc."/>                        
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-others-alert"></span>  
+                        </div>
+    
+                    </div>
+
+                    <div id="others-content" class="product-content">
+
+                        <div class="input-content">
+
+                            <label for="input" class="lbl-attributes"></label>
+                            
+                            <div class="input-measures">
+                                <input type="text" id="input-others" style="text-align: left;" placeholder="Ex: loja, residência, vitrine, etc."/>                        
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="input-others-alert"></span>  
+                        </div>
+    
+                    </div>
+
+                    <div class="product-content">
+
+                        <div class="select">
+
+                            <label for="quantity" class="lbl-attributes">Quantidade</label>
+    
+                            <div class="quantity-container">
+                                <button type="button" onclick="adjust_quantity(-1)">-</button>
+                                <input type="tel" id="quantity" name="quantity" value="0" oninput="handleInput(this)">
+                                <button type="button" onclick="adjust_quantity(1)">+</button>
+                            </div>
+    
+                        </div>
+
+                        <div class="alert-message-content">
+                            <label for="input" class="lbl-attributes"></label>
+                            <span class="alert-message" id="quantity-alert" style="text-align: end;"></span>  
+                        </div>
+
+                    </div>
+
+                    <div class="upload">
+
+                        <h2>Já tem o seu design?</h2>
+
+                        <div class="info">
+                            <p>Basta fazer upload da sua arte final no formato PDF, CDR, AI ou PSD, com uma resolução mínima de 300 dpi e tamanho real do adesivo. Caso não tenha o seu design, não se preocupe, a PostArt cria tudo pra você!</p>
+                        </div>
+
+                        <span id="fileName">Nenhum arquivo selecionado</span>
+
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                            <div class="progress-text" id="progress-text"></div>
+                        </div>
+
+                        <button type="button" class="custom-button" id="uploadButton">
+                            <i class="fa-solid fa-upload"></i> 
+                            <p class="buttom-title">Carregar</p>
+                            <input type="file" id="fileInput" accept=".pdf, .cdr, .ai, .psd">
+                        </button>
+
+                        <button type="button" class="custom-button" id="removeButton">
+                            <i class="fa-regular fa-trash-can"></i>
+                            <p class="buttom-title">Remover</p>
+                        </button>
+
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <form>
+
+            <div class="title-description-content">
+                <h3>Contato</h3>
+                <p>Entraremos em contato assim que possível, informaremos o valor do serviço e conograma de entrega.</p>
+            </div>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Contato</legend>
+
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name">
+                    <span class="alert-message" id="name-alert">Digite seu nome.</span>
+                </div>
+    
+                <div class="form-group-content">
+    
+                    <div class="form-group" id="group-email">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" style="text-transform: lowercase ;">
+                        <span class="alert-message" id="email-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-phone">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XX) XXXX-XXXX">
+                        <span class="alert-message" id="phone-alert"></span>
+                    </div>
+    
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="form-fieldset">
+
+                <legend>Endereço</legend>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-public_place">
+                        <label for="public_place">Logradouro</label>
+                        <input type="text" id="public_place" name="public_place" placeholder="Ex: rua, avenida, travessa, praça, etc.">
+                        <span class="alert-message" id="public_place-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-number">
+                        <label for="number">Número</label>
+                        <input type="tel" id="number" name="number">
+                        <span class="alert-message" id="number-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-complement">
+                        <label for="complement">Complemento <span>(Opcional)</span></label>
+                        <input type="text" id="complement" name="complement" placeholder="Ex: casa, apartamento, sala, etc.">
+                    </div>
+    
+                    <div class="form-group" id="group-neighborhood">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" name="neighborhood">
+                        <span class="alert-message" id="neighborhood-alert"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group-content">
+
+                    <div class="form-group" id="group-city">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" name="city">
+                        <span class="alert-message" id="city-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-state">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" name="state">
+                        <span class="alert-message" id="state-alert"></span>
+                    </div>
+    
+                    <div class="form-group" id="group-cep">
+                        <label for="cep">CEP</label>
+                        <input type="tel" id="cep" name="cep">
+                        <span class="alert-message" id="cep-alert"></span>
+                    </div>
+
+                </div>
+                
+            </fieldset>
+
+            <div class="form-group">
+                <label for="observation">Observação <span>(Opcional)</span></label>
+                <textarea id="observation" name="observation" rows="4"></textarea>
+            </div>
+
+            <button type="button" class="custom-button" onclick="validarInput()">
+                <p class="buttom-title">Enviar</p>
+            </button>
+
+        </form>
+
+        <div class="product-description">
+
+            <div class="technical-description">
+                <h5>Descrição Técnica</h5>
+            </div>   
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Placa Luminosa Retangular</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i> 
+
+                </button>
+                
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                        <p>A Placa Luminosa Retangular é ideal para destacar a sua marca com um design elegante e moderno. Perfeita para uso em ambientes externos e internos, ela garante visibilidade e atração, tanto durante o dia quanto à noite.</p>                  
+                        <ul>
+                            <li><strong>Iluminação: </strong>utiliza tecnologia LED de alta eficiência, garantindo brilho intenso com baixo consumo de energia.</li>
+                            <li><strong>Uso: </strong>projetada para uso externo, com resistência a intempéries, mas também adequada para uso interno.</li>
+                            <li><strong>Cores: </strong>personalizável com várias opções de cores para o texto e o logotipo.</li>
+                            <li><strong>Instalação: </strong>fácil de instalar, acompanha kit de fixação.</li>
+                            <li><strong>Aplicações: </strong>ideal para fachadas, vitrines, interiores de lojas, restaurantes, bares, eventos, feiras, entre outros.</li>
+                        </ul>
+                        <p><strong>Diferenciais:</strong></p>
+                        <ul>
+                            <li><strong>Eficiência Energética: </strong>baixo consumo de energia com a tecnologia LED.</li>
+                            <li><strong>Visibilidade: </strong>excelente visibilidade diurna e noturna.</li>
+                            <li><strong>Durabilidade: </strong>alta resistência a fatores climáticos, perfeita para uso prolongado em ambientes externos.</li>
+                            <li><strong>Personalização: </strong>totalmente personalizável de acordo com a identidade visual da marca.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Tamanho</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">  
+
+                    <div class="description">
+
+                        <p>O tamanho da Placa Luminosa Retangular é totalmente personalizável, permitindo ajustes em altura, largura e espessura conforme as necessidades específicas de cada cliente. Essa flexibilidade garante que a placa se adapte perfeitamente ao espaço disponível e ao objetivo de uso, proporcionando máxima visibilidade e impacto visual tanto em aplicações internas quanto externas.</p>
+                        <p>Personalize o tamanho ideal para seu projeto. Insira a altura e largura desejadas em centímetros que se encaixa perfeitamente nas suas necessidades.</p>       
+                    
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Material</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content"> 
+
+                    <div class="description">
+
+                    <p>Disponível em Lona ou ACM (Aluminum Composite Material), ambos materiais de alta durabilidade e resistência.</p>    
+                    <p><strong>Lona:</strong></p>
+                    <ul>
+                        <li><strong>Durabilidade e Resistência: </strong>Ideal para ambientes externos, resistindo bem a intempéries.</li>
+                        <li><strong>Flexibilidade e Leveza: </strong>Facilita a moldagem e a instalação.</li>
+                        <li><strong>Custo-Benefício: </strong>Econômica e versátil para uso interno e externo.</li>
+                    </ul>
+                    <p><strong>ACM:</strong></p>
+                    <ul>
+                        <li><strong>Robustez e Estabilidade: </strong>Composto por lâminas de alumínio e núcleo de polietileno, resistente à corrosão.</li>
+                        <li><strong>Acabamento e Personalização: </strong>Proporciona um acabamento moderno e permite alta qualidade de impressão.</li>
+                        <li><strong>Facilidade de Manutenção: </strong>Fácil de limpar e manter, com aparência duradoura.</li>
+                    </ul>
+
+                    <p>Esses materiais garantem durabilidade, resistência e um excelente impacto visual para a placa luminosa.</p>
+                
+                </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Finalidade De Uso</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                    <p>A Placa Luminosa Retangular é ideal para diversos ambientes, como lojas, restaurantes, escritórios, eventos, hotéis, academias, hospitais, escolas, centros de convenções, museus, entre outros.</p>
+                    <p>Ela destaca fachadas, vitrines, interiores, menus, recepções e sinalizações internas, realçando marcas, produtos e serviços. Com isso, maximiza a visibilidade e atratividade, proporcionando uma comunicação visual eficaz e um impacto estético significativo.</p><br>
+                    <p><strong>Loja: </strong>fachada, vitrine, interior.</p>
+                    <p><strong>Restaurante/Bar: </strong>fachada, menu, interior.</p>
+                    <p><strong>Escritório: </strong>recepção, sinalização interna.</p>
+                    <p><strong>Evento/Feira: </strong>stand, banner.</p>
+                    <p><strong>Hotel: </strong>fachada, recepção, quartos.</p>
+                    <p><strong>E muitos outros...</strong></p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Objetivo</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">   
+
+                    <div class="description">
+
+                        <p>A Placa Luminosa Retangular tem como principal objetivo destacar e promover marcas, produtos ou serviços, proporcionando um impacto visual significativo que atrai e cativa a atenção do público-alvo. Seus objetivos específicos variam conforme a finalidade de uso:</p><br>
+                        <p><strong>Loja:</strong></p>
+                        <ul>
+                            <li><strong>Fachada: </strong>atrair clientes e destacar a identidade visual da loja, tornando-a facilmente reconhecível.</li>
+                            <li><strong>Vitrine: </strong>iluminar e chamar a atenção para produtos em exposição, incentivando compras por impulso.</li>
+                            <li><strong>Interior: </strong>melhorar a ambientação e orientar os clientes dentro da loja.</li>
+                        </ul>
+                        <p><strong>Restaurante/Bar:</strong></p>
+                        <ul>
+                            <li><strong>Fachada: </strong>tornar o estabelecimento visível e atraente, especialmente à noite.</li>
+                            <li><strong>Menu: </strong>facilitar a leitura do menu, destacando itens especiais e promoções.</li>
+                            <li><strong>Interior: </strong>criar um ambiente acolhedor e informativo, guiando os clientes.</li>
+                        </ul>
+                        <p><strong>Escritório:</strong></p>
+                        <ul>
+                            <li><strong>Recepção: </strong>receber visitantes de maneira profissional, destacando a marca.</li>
+                            <li><strong>Sinalização Interna: </strong>facilitar a localização de departamentos e salas.</li>
+                        </ul>
+                        <p><strong>Evento/Feira:</strong></p>
+                        <ul>
+                            <li><strong>Stand: </strong>aumentar a visibilidade e atratividade do stand, destacando a empresa ou produto.</li>
+                            <li><strong>Banner: </strong>comunicar informações importantes de forma clara e chamativa.</li>
+                        </ul>
+                        <p><strong>Hotel:</strong></p>
+                        <ul>
+                            <li><strong>Fachada: </strong>destacar a presença do hotel, tornando-o facilmente identificável.</li>
+                            <li><strong>Recepção: </strong>receber os hóspedes com uma imagem profissional e acolhedora.</li>
+                            <li><strong>Quartos: </strong>proporcionar informações úteis e decorar o ambiente.</li>
+                        </ul>
+                        <p><strong>Outros exemplos incluem:</strong></p>
+                        <ul>
+                            <li><strong>Academia: </strong>sinalização de equipamentos e áreas, criando um ambiente organizado.</li>
+                            <li><strong>Hospital/Clínica: </strong>orientar pacientes e visitantes, destacando departamentos.</li>
+                            <li><strong>Escola/Universidade: </strong>sinalizar salas de aula e áreas comuns, facilitando a orientação.</li>
+                            <li><strong>Centro de Convenções: </strong>guiar participantes e destacar eventos importantes.</li>
+                            <li><strong>Museu/Galeria: </strong>destacar exposições e orientar visitantes.</li>
+                        </ul>
+                        <p>A Placa Luminosa Retangular é projetada para maximizar a visibilidade e atratividade de estabelecimentos e eventos, melhorando a comunicação visual, orientando visitantes e criando uma identidade visual forte e impactante.</p>
+
+                    </div>
+
+                </div>
+    
+            </div>
+
+            <div style="margin-bottom: 0px;" class="toggle-content">
+
+                <button class="toggle">
+
+                    <h4>Quantidade</h4>
+                    <i class="fa-solid fa-chevron-down"></i>      
+                    <i class="fa-solid fa-chevron-up"></i>  
+
+                </button>
+    
+                <div class="description-content">
+
+                    <div class="description">
+
+                        <p><strong>Pedidos Personalizados: </strong>escolha a quantidade que melhor atende às suas necessidades, seja para pequenos projetos ou grandes campanhas publicitárias.</p>
+                        <p><strong>Descontos Progressivos: </strong>aproveite nossos preços competitivos com descontos especiais para compras em grande escala.</p>  
+                        <p><strong>Gestão de Estoque: </strong>estoque sempre atualizado para atender pedidos de qualquer tamanho com rapidez e eficiência.</p>                                                                    
+                    
+                    </div> 
+
+                </div>
+    
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/product.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
