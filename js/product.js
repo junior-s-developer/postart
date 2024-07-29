@@ -150,6 +150,8 @@ function validarInput() {
     var vehicle_objective = document.getElementById('vehicle-objective');
     var banner_objective = document.getElementById('banner-objective');
     var purpose_use = document.getElementById('purpose-use');
+    var input_purpose_use = document.getElementById('input-purpose-use');
+    var input_objective = document.getElementById('input-objective');
     var application = document.getElementById('application');
     var others_content = document.getElementById('others-content');
     var input_others = document.getElementById('input-others');
@@ -171,7 +173,7 @@ function validarInput() {
 
     if (input_alt && !input_alt.value.trim()) {
      
-        showAlert('input-alt-alert', 'informe as dimensões (altura e largura).');
+        showAlert('input-alt-alert', 'informe as dimensões (altura x largura).');
         hideAlert('input-alt', 'input-alt-alert');
         input_alt.focus();
         return false;
@@ -179,7 +181,7 @@ function validarInput() {
 
     if (input_larg && !input_larg.value.trim()) {
       
-        showAlert('input-larg-alert', 'informe as dimensões (altura e largura).');
+        showAlert('input-larg-alert', 'informe as dimensões (altura x largura).');
         hideAlert('input-larg', 'input-larg-alert');
         input_larg.focus();
         return false;
@@ -214,6 +216,22 @@ function validarInput() {
         showAlert('purpose-use-alert', 'Escolha a finalidade de uso.');
         hideAlert('purpose-use', 'purpose-use-alert');
         purpose_use.focus();
+        return false;
+    }
+
+    if (input_purpose_use && !input_purpose_use.value.trim()) {
+       
+        showAlert('input-purpose-use-alert', 'Informe a finalidade de uso.');
+        hideAlert('input-purpose-use', 'input-purpose-use-alert');
+        input_purpose_use.focus();
+        return false;
+    }
+
+    if (input_objective && !input_objective.value.trim()) {
+       
+        showAlert('input-objective-alert', 'Informe o objetivo da placa.');
+        hideAlert('input-objective', 'input-objective-alert');
+        input_objective.focus();
         return false;
     }
 
